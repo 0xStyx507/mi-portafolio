@@ -4,7 +4,7 @@
   "descripcion": "Soy desarrollador backend y participe en el proyecto Oracle ONE en Alura.",
   "enlaces": [
     { "label": "GitHub", "url": "https://github.com/HellheimPTY" },
-    { "label": "LinkedIn", "url": "#" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/abdiel-bernal" },
     { "label": "Instagram", "url": "#" },
     { "label": "Currículum", "url": "#" }
   ],
@@ -27,5 +27,7 @@
       "año": "En curso"
     }
   ],
-  "añoPie": "2025"
+  "añoPie": "2025",
+  "colorFondo": "#123145",
+  "colorLetra": "#f1b930"
 }

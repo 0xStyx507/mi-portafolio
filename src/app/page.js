@@ -11,13 +11,13 @@ export default function Home() {
    
   
   return (
-  <main className="min-h-screen px-4 py-8 md:px-16 bg-black bg-opacity-50 text-white">
+  <main className="min-h-screen px-4 py-8 md:px-16 bg-[#222831] text-[#00ADB5]">
 
       <header className="flex justify-between items-center mb-12">
 
-        <h1 className="text-3xl font-bold">Hola, soy {data.nombre}</h1>
+        <h1 className="text-3xl  font-bold">Hola, soy {data.nombre}</h1>
        
-        <a href={`mailto:${data.email}`}  className="text-sm underline">{data.email}</a>
+        <a href={`mailto:${data.email}`}  className="text-sm underline ">{data.email}</a>
      
       </header>
 
@@ -28,7 +28,7 @@ export default function Home() {
         <div className="flex flex-wrap gap-4 mt-4">
 
           {data.enlaces.map((enlace, i) => (
-            <a key={i} href={enlace.url} className="underline text-sm">{enlace.label}</a>
+            <a key={i} href={enlace.url} className="underline text-sm  hover:text-white">{enlace.label}</a>
           ))}
 
         </div>

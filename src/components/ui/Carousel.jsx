@@ -39,7 +39,7 @@ function ScrollButton({ onClick, position }) {
   return (
     <button
       onClick={onClick}
-      className={`hidden md:flex absolute top-1/2 -translate-y-1/2 z-10 p-2 bg-black rounded-full shadow ${
+      className={`hidden md:flex absolute top-1/2 -translate-y-1/2 z-10 p-2 bg-white/30 text-[#f1b930] rounded-full shadow ${
         isLeft ? "left-2" : "right-2"
       }`}
     >
