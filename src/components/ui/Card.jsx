@@ -3,5 +3,5 @@ export function Card({ children }) {
 }
 
 export function CardContent({ children }) {
-  return <div className="text-sm text-white">{children}</div>;
+  return <div className="text-sm text-[#00ADB5]">{children}</div>;
 }

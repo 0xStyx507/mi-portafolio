@@ -9,7 +9,8 @@
     { "label": "Currículum", "url": "#" }
   ],
   "sobreMi": "Me apasiona la tecnología y me especializo en desarrollo backend y la ciberseguridad. Estoy en constante aprendizaje de herramientas modernas como React y TailwindCSS.",
-  "habilidades": ["HTML5", "CSS3", "JavaScript", "React", "Node.js", "Git", "TailwindCSS", "Java", "Python", "SQL", "Postman"],
+  "front": ["HTML5", "CSS3", "JavaScript", "React", "Node.js", "TailwindCSS","Next.js"],
+  "back": ["Java", "Python", "Postman", "Node.js", "Git", "Insonia", "Ciberseguridad", "PosgreSQL", "MySQL"],
   "formacion": [
     {
       "titulo": "Análisis de Datos",

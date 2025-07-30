@@ -46,11 +46,20 @@ export default function Home() {
        {/* Skills Section */}
        <section className="my-10">
 
-      <h2 className="text-2xl font-bold mb-4">Habilidades</h2>
+      <h2 className="text-2xl text-center font-bold mb-4">Frontend</h2>
 
       <Carousel>
 
-        {data.habilidades.map((skill, i) => (
+        {data.front.map((skill, i) => (
+          <CarouselItem key={i}>{skill}</CarouselItem>
+        ))}
+
+      </Carousel>
+
+      <h2 className="text-2xl text-center font-bold mt-8 mb-4">Backend</h2>
+            <Carousel>
+
+        {data.back.map((skill, i) => (
           <CarouselItem key={i}>{skill}</CarouselItem>
         ))}
 

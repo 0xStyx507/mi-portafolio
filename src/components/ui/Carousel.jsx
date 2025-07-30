@@ -21,7 +21,7 @@ export default function Carousel({ children, className = "" }) {
       {/* Contenido deslizable */}
       <div
         ref={scrollRef}
-        className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide px-8"
+        className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide px-8 items-center justify-center "
       >
         {children}
       </div>
@@ -51,7 +51,7 @@ function ScrollButton({ onClick, position }) {
 export function CarouselItem({ children, className = "" }) {
   return (
     <div className={`min-w-[150px] flex-shrink-0 ${className}`}>
-      <div className="rounded-lg border p-4 text-center bg-black/10 shadow">
+      <div className="rounded-lg border p-4 text-center bg-black/10  shadow">
         {children}
       </div>
     </div>
