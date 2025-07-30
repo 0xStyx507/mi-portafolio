@@ -1,0 +1,31 @@
+{
+  "nombre": "Abdiel Bernal",
+  "email": "2apty507@gmail.com",
+  "descripcion": "Soy desarrollador backend y participe en el proyecto Oracle ONE en Alura.",
+  "enlaces": [
+    { "label": "GitHub", "url": "https://github.com/HellheimPTY" },
+    { "label": "LinkedIn", "url": "#" },
+    { "label": "Instagram", "url": "#" },
+    { "label": "Currículum", "url": "#" }
+  ],
+  "sobreMi": "Me apasiona la tecnología y me especializo en desarrollo backend y la ciberseguridad. Estoy en constante aprendizaje de herramientas modernas como React y TailwindCSS.",
+  "habilidades": ["HTML5", "CSS3", "JavaScript", "React", "Node.js", "Git", "TailwindCSS", "Java", "Python", "SQL", "Postman"],
+  "formacion": [
+    {
+      "titulo": "Análisis de Datos",
+      "institucion": "UFPR",
+      "año": "2018"
+    },
+    {
+      "titulo": "Formación UX Design",
+      "institucion": "Alura",
+      "año": "2019"
+    },
+    {
+      "titulo": "Posgrado en Diseño",
+      "institucion": "UFRJ",
+      "año": "En curso"
+    }
+  ],
+  "añoPie": "2025"
+}
