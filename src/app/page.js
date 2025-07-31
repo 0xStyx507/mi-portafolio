@@ -5,30 +5,31 @@ import { Input } from "../components/ui/Input.jsx";
 import { Button } from "../components/ui/Button.jsx";
 import React, { useRef } from "react";
 import Carousel, { CarouselItem } from "../components/ui/Carousel.jsx";
+import ThemeToggle from "../components/ui/themeToggle.jsx";
 
 
 export default function Home() {
    
   
   return (
-  <main className="min-h-screen px-4 py-8 md:px-16 bg-[#222831] text-[#00ADB5]">
+  <div className="">
 
-      <header className="flex justify-between items-center mb-12">
+      <header className="">
 
-        <h1 className="text-3xl  font-bold">Hola, soy {data.nombre}</h1>
+        <h1 className="">Hola, soy {data.nombre}</h1>
        
         <a href={`mailto:${data.email}`}  className="text-sm underline ">{data.email}</a>
-     
+      
       </header>
+       <ThemeToggle />
+      <section className="">
 
-      <section className="mb-12">
+        <p className="">{data.descripcion}</p>
 
-        <p className="text-lg">{data.descripcion}</p>
-
-        <div className="flex flex-wrap gap-4 mt-4">
+        <div className="">
 
           {data.enlaces.map((enlace, i) => (
-            <a key={i} href={enlace.url} className="underline text-sm  hover:text-white">{enlace.label}</a>
+            <a key={i} href={enlace.url} className="">{enlace.label}</a>
           ))}
 
         </div>
@@ -37,7 +38,7 @@ export default function Home() {
 
       <section className="mb-12">
 
-        <h2 className="text-2xl font-semibold mb-2">Sobre mí</h2>
+        <h2 className="">Sobre mí</h2>
 
         <p className="text-sm leading-relaxed">{data.sobreMi}</p>
 
@@ -46,7 +47,7 @@ export default function Home() {
        {/* Skills Section */}
        <section className="my-10">
 
-      <h2 className="text-2xl text-center font-bold mb-4">Frontend</h2>
+      <h2 className="">Frontend</h2>
 
       <Carousel>
 
@@ -117,6 +118,6 @@ export default function Home() {
       <footer className="text-center text-sm mt-12">
         Desarrollado por {data.nombre} - {data.añoPie}
       </footer>
-    </main>
+    </div>
   );
 }

@@ -9,7 +9,7 @@ export default function Carousel({ children, className = "" }) {
   const scroll = (dir) => {
     const el = scrollRef.current;
     if (!el) return;
-    const amount = el.clientWidth * 0.6;
+    const amount = el.clientWidth * 2;
     el.scrollBy({ left: dir === "left" ? -amount : amount, behavior: "smooth" });
   };
 
@@ -21,7 +21,7 @@ export default function Carousel({ children, className = "" }) {
       {/* Contenido deslizable */}
       <div
         ref={scrollRef}
-        className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide px-8 items-center justify-center "
+        className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide items-center justify-center "
       >
         {children}
       </div>
@@ -39,7 +39,7 @@ function ScrollButton({ onClick, position }) {
   return (
     <button
       onClick={onClick}
-      className={`hidden md:flex absolute top-1/2 -translate-y-1/2 z-10 p-2 bg-white/30 text-[#f1b930] rounded-full shadow ${
+      className={`hidden md:flex absolute top-1/2 -translate-y-1/2 z-10 p-2 bg-white text-[#12345] rounded-full shadow ${
         isLeft ? "left-2" : "right-2"
       }`}
     >
