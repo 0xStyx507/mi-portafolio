@@ -12,16 +12,16 @@ export default function Home() {
    
   
   return (
-  <div className="">
+  <div className="bg-bg p-6 hover:border-color3 transition-colors">
 
       <header className="">
 
-        <h1 className="">Hola, soy {data.nombre}</h1>
+        <h1 className="text-2xl">Hola, soy {data.nombre}</h1>
        
         <a href={`mailto:${data.email}`}  className="text-sm underline ">{data.email}</a>
       
       </header>
-       <ThemeToggle />
+        <ThemeToggle />
       <section className="">
 
         <p className="">{data.descripcion}</p>
@@ -109,7 +109,7 @@ export default function Home() {
        
           <textarea placeholder="Mensaje" className="border rounded-md p-2 h-32 md:col-span-2" />
        
-          <Button className="w-full md:w-auto md:col-span-2">Enviar mensaje</Button>
+          <Button className="">Enviar mensaje</Button>
        
         </form>
 

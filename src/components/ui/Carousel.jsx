@@ -50,7 +50,7 @@ function ScrollButton({ onClick, position }) {
 
 export function CarouselItem({ children, className = "" }) {
   return (
-    <div className={`min-w-[150px] flex-shrink-0 ${className}`}>
+    <div className={`min-w-[150px] shrink-0 ${className}`}>
       <div className="rounded-lg border p-4 text-center bg-black/10  shadow">
         {children}
       </div>

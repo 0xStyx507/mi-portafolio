@@ -1,30 +1,35 @@
-@import "tailwindcss/preflight";
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+@import "tailwindcss/base";
 
-/* transición suave */
-:root {
-  --transition: background-color .25s ease, color .25s ease;
-}
-
-@layer base {
-  body {
-    transition: var(--transition);
-    --bg: #F5F7FA; /* claro por defecto */
-    --text: #2E2E2E;
-    --color1: #FF4E6B; /*Rojo*/
-    --color2: #26FFC2; /*Verde*/
-    --color3: #3FD6FF; /*Azul*/
-    --color4: #BB6BD9; /*Violeta*/
-
+@theme {
+--color-primary: #1D4ED8; /* Blue */
+--color-secondary: #F59E0B; /* Amber */
+--color-accent: #EC4899; /* Pink */
+--color-background: #F3F4F6; /* Gray */
+--color-text: #111827; /* Dark Gray */
+--color-border: #d1d5db; /* Light Gray */
+--color-success: #16a34a; /* Green */
+--color-warning: #f59e0b; /* Amber */
+--color-error: #dc2626; /* Red */
+--color-info: #2563eb; /* Blue */
+--font-sans:'IBM Plex Sans','Roboto', sans-serif;
   }
 
-  .dark {
-    --bgd: #0A0A0A;
-    --textd: #E5E5E5;
-    --color-1: #FF003C; /*Rojo oscuro*/
-    --color-2: #00FF85; /*Verde oscuro*/
-    --color-3: #00CFFF; /*Azul oscuro*/
-    --color-4: #9D00FF; /*Violeta oscuro*/
-
+  @layer base {
+    body {
+      :root[data-theme='dark'] {
+        --color-background: #111827; /* Dark Gray */
+        --color-text: #F3F4F6; /* Light Gray */
+        --color-border: #374151; /* Darker Gray */
+      }
+      :root[data-theme='light'] {
+        --color-background: #F3F4F6; /* Light Gray */
+        --color-text: #111827; /* Dark Gray */
+        --color-border: #d1d5db; /* Light Gray */
+      }
+    }
   }
+
+html, body {
+  @apply bg-background text-text border-border font-sans;
 }
