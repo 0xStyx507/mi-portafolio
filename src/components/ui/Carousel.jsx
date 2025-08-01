@@ -21,7 +21,7 @@ export default function Carousel({ children, className = "" }) {
       {/* Contenido deslizable */}
       <div
         ref={scrollRef}
-        className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide px-8"
+        className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide px-8 bg-background text-text"
       >
         {children}
       </div>
@@ -39,7 +39,7 @@ function ScrollButton({ onClick, position }) {
   return (
     <button
       onClick={onClick}
-      className={`hidden md:flex absolute top-1/2 -translate-y-1/2 z-10 p-2 bg-black rounded-full shadow ${
+      className={`hidden md:flex absolute top-1/2 -translate-y-1/2 z-10 p- rounded-full shadow ${
         isLeft ? "left-2" : "right-2"
       }`}
     >
@@ -51,7 +51,7 @@ function ScrollButton({ onClick, position }) {
 export function CarouselItem({ children, className = "" }) {
   return (
     <div className={`min-w-[150px] flex-shrink-0 ${className}`}>
-      <div className="rounded-lg border p-4 text-center bg-black/10 shadow">
+      <div className="rounded-lg border p-4 text-center shadow">
         {children}
       </div>
     </div>
