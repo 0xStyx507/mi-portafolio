@@ -1,32 +1,64 @@
 {
   "nombre": "Abdiel Bernal",
+
   "email": "2apty507@gmail.com",
-  "descripcion": "Soy desarrollador backend y participe en el proyecto Oracle ONE en Alura.",
+
+  "descripcion": "Soy desarrollador backend y participe en el proyecto Oracle ONE en Alura, Actualmente estoy en proceso de formación para la formación de una Licenciatura en Ingeniería en Ciberseguridad.",
+
   "enlaces": [
+
     { "label": "GitHub", "url": "https://github.com/HellheimPTY" },
-    { "label": "LinkedIn", "url": "#" },
+   
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/abdiel-bernal" },
+   
     { "label": "Instagram", "url": "#" },
+   
     { "label": "Currículum", "url": "#" }
   ],
+
   "sobreMi": "Me apasiona la tecnología y me especializo en desarrollo backend y la ciberseguridad. Estoy en constante aprendizaje de herramientas modernas como React y TailwindCSS.",
-  "habilidades": ["HTML5", "CSS3", "JavaScript", "React", "Node.js", "Git", "TailwindCSS", "Java", "Python", "SQL", "Postman"],
+ 
+  "front": ["HTML5", "CSS3", "JavaScript", "React", "Node.js", "TailwindCSS","Next.js"],
+ 
+  "back": ["Java", "Python", "Postman", "Git", "Insonia", "PosgreSQL", "MySQL"],
  
   "formacion": [
     {
-      "titulo": "Análisis de Datos",
-      "institucion": "UFPR",
-      "año": "2018"
+      "titulo": "Python más Allá de lo Básico",
+     
+      "institucion": "Python Panamá",
+     
+      "año": "2025"
     },
+
     {
-      "titulo": "Formación UX Design",
+      "titulo": "Desarrollo de Software Backend Java",
+     
       "institucion": "Alura",
-      "año": "2019"
+     
+      "año": "2024"
     },
+
     {
-      "titulo": "Posgrado en Diseño",
-      "institucion": "UFRJ",
+      "titulo": "Técncico en Sistemas de Operativos",
+      
+      "institucion": "Clawing",
+
+      "año": "2024"
+    },
+
+    {
+      "titulo": "Licenciatura en Ingeniería de Ciberseguridad",
+     
+      "institucion": "Universidad del Istmo",
+     
       "año": "En curso"
     }
   ],
-  "añoPie": "2025"
+
+  "añoPie": "2025",
+ 
+  "colorFondo": "#123145",
+ 
+  "colorLetra": "#f1b930"
 }
