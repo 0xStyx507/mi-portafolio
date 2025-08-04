@@ -90,9 +90,7 @@ export default function Home() {
        
           <Input placeholder="Correo electrónico" type="email" />
        
-          <Input placeholder="Asunto" className="md:col-span-2" />
-       
-          <textarea placeholder="Mensaje" className="border rounded-md p-2 h-32 md:col-span-2" />
+          <Input placeholder="Asunto" className="md:col-span-2 rounded-md border border-ring text-sm shadow-sm hover:border-chart-2 focus:border-chart-1" />
        
           <Button className="w-full md:w-auto md:col-span-2">Enviar mensaje</Button>
        
