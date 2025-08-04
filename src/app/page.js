@@ -43,23 +43,7 @@ export default function Home() {
        <section className="my-10">
 
       <h2 className="text-2xl font-bold mb-4">Habilidades</h2>
-          <h2>Front</h2>
-      <Carousel>
-  
-        {data.front.map((skill, i) => (
-          <CarouselItem key={i}>
-            {skill}</CarouselItem>
-        ))}
 
-      </Carousel>
-      <h2>Back</h2>
-       <Carousel>
-
-        {data.back.map((skill, i) => (
-          <CarouselItem key={i}>{skill}</CarouselItem>
-        ))}
-
-      </Carousel>
       <Logo/>
         </section>
      
