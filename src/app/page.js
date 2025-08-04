@@ -86,11 +86,11 @@ export default function Home() {
        
         <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
        
+          <Input placeholder="Asunto" className="md:col-span-2" />
+          
           <Input placeholder="Nombre" />
        
           <Input placeholder="Correo electrónico" type="email" />
-       
-          <Input placeholder="Asunto" className="md:col-span-2" />
        
           <textarea placeholder="Mensaje" className="border rounded-md p-2 h-32 md:col-span-2" />
        
