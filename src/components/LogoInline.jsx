@@ -133,7 +133,7 @@ function LogoCard({ logo, theme, getLogoUrl }) {
           {logo.title}
         </div>
       )}
-      <div className="text-xs font-medium">{logo.title}</div>
+      <div className="text-xs font-medium py-2">{logo.title}</div>
       <div className="text-[10px]">{logo.type}</div>
     </div>
   );

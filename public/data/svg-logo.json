@@ -112,7 +112,7 @@
     {
       "title": "Git",
       "category": "Backend",
-      "type": "Herramienta de Control de Versiones",
+      "type": "Control de Versiones",
       "enabled": true,
       "svg": "https://svgl.app/library/git.svg",
       "alias": "git"
@@ -120,7 +120,7 @@
     {
       "title": "GitHub",
       "category": "Version Control",
-      "type": "Herramienta de Control de Versiones",
+      "type": "Control de Versiones",
       "enabled": true,
       "svg_light": "https://svgl.app/library/github_light.svg",
       "svg_dark": "https://svgl.app/library/github_dark.svg",
@@ -144,7 +144,7 @@
       "alias": "pycharm"
     },
     {
-      "title": "Visual Studio Code",
+      "title": "VisualStudioCode",
       "category": "Frontend",
       "type": "IDE",
       "enabled": true,
@@ -153,8 +153,8 @@
     },
     {
       "title": "Intellij IDEA",
-      "category": "IDE",
-      "type": "Software",
+      "category": "Backend",
+      "type": "IDE",
       "enabled": true,
       "svg_light":"https://svgl.app/library/intellijidea.svg",
       "alias": "intellij-idea"
