@@ -6,6 +6,7 @@ import { Button } from "../components/ui/Button.jsx";
 import React, { useRef } from "react";
 import Carousel, { CarouselItem } from "../components/ui/Carousel.jsx";
 import Navbar from "../components/ui/Navbar.jsx";
+import Logo from "../components/LogoInline.jsx";
 
 export default function Home() {
    
@@ -42,16 +43,25 @@ export default function Home() {
        <section className="my-10">
 
       <h2 className="text-2xl font-bold mb-4">Habilidades</h2>
-
+          <h2>Front</h2>
       <Carousel>
+  
+        {data.front.map((skill, i) => (
+          <CarouselItem key={i}>
+            {skill}</CarouselItem>
+        ))}
 
-        {data.habilidades.map((skill, i) => (
+      </Carousel>
+      <h2>Back</h2>
+       <Carousel>
+
+        {data.back.map((skill, i) => (
           <CarouselItem key={i}>{skill}</CarouselItem>
         ))}
 
       </Carousel>
-
-      </section>
+      <Logo/>
+        </section>
      
       <section className="mb-12">
        
@@ -74,8 +84,6 @@ export default function Home() {
             </Card>
         
           ))}
-       
-       
         </div>
 
       </section>
@@ -94,7 +102,7 @@ export default function Home() {
        
           <textarea placeholder="Mensaje" className="border rounded-md p-2 h-32 md:col-span-2" />
        
-          <Button className="w-full md:w-auto md:col-span-2">Enviar mensaje</Button>
+          <Button>Enviar mensaje</Button>
        
         </form>
 

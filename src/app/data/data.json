@@ -18,13 +18,10 @@
 
   "sobreMi": "Me apasiona la tecnología y me especializo en desarrollo backend y la ciberseguridad. Estoy en constante aprendizaje de herramientas modernas como React y TailwindCSS.",
  
- "habilidades":[
+  "front":["HTML5", "CSS3", "JavaScript", "React", "Node.js", "TailwindCSS", "Next.js"],
+ 
+  "back":["Java", "Python", "Postman", "Git", "Insonia", "PosgreSQL"," MySQL"],
 
-  { "front": "HTML5  CSS3 JavaScript React Node.js TailwindCSS Next.js"},
- 
-  {"back": "Java Python Postman Git Insonia PosgreSQL MySQL"}
- ],
- 
   "formacion": [
     {
       "titulo": "Python más Allá de lo Básico",
@@ -43,7 +40,7 @@
     },
 
     {
-      "titulo": "Técncico en Sistemas de Operativos",
+      "titulo": "Técnico en Sistemas de Operativos",
       
       "institucion": "Clawing",
 

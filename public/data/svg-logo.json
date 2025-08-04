@@ -1,0 +1,117 @@
+{
+  "logos": [
+    {
+      "title": "React",
+      "category": "Frontend",
+      "type": "Language",
+      "enabled": true,
+      "svg": "https://svgl.app/library/react_dark.svg",
+      "alias": "react"
+    },
+    {
+      "title": "JavaScript",
+      "category": "Frontend",
+      "type": "Language",
+      "enabled": true,
+      "svg": "https://svgl.app/library/javascript.svg",
+      "alias": "javascript"
+    },
+    {
+    "title": "HTML5",
+      "category": "Frontend",
+      "type": "Language",
+      "enabled": true,
+      "svg": "https://svgl.app/library/html5.svg",
+      "alias": "html5"
+    },
+    {
+      "title": "CSS3",
+      "category": "Frontend",
+      "type": "Language",
+      "enabled": true,
+      "svg": "https://svgl.app/library/css.svg",
+      "alias": "css3"
+    },
+    {
+      "title": "Tailwind CSS",
+      "category": "Frontend",
+      "type": "Framework",
+      "enabled": true,
+      "svg": "https://svgl.app/library/tailwindcss-wordmark.svg",
+      "alias": "tailwindcss"
+    },
+  
+    {
+      "title": "Node.js",
+      "category": "Backend",
+      "type": "Language",
+      "enabled": true,
+      "svg": "https://svgl.app/library/nodejs.svg",
+      "alias": "nodejs"
+    },
+    {
+      "title": "Java",
+      "category": "Backend",
+      "type": "Language",
+      "enabled": true,
+      "svg": "https://svgl.app/library/java.svg",
+      "alias": "java"
+    },
+    {
+      "title": "PostgreSQL",
+      "category": "Database",
+      "type": "Database",
+      "enabled": true,
+      "svg": "https://svgl.app/library/postgresql.svg",
+      "alias": "postgresql"
+    },
+     {
+      "title": "MySQL",
+      "category": "Database",
+      "type": "Database",
+      "enabled": true,
+      "svg": "https://svgl.app/library/mysql.svg",
+      "alias": "mysql"
+    },
+    {
+      "title": "MongoDB",
+      "category": "Database",
+      "type": "Database",
+      "enabled": true,
+      "svg": "https://svgl.app/library/mongodb-wordmark.svg",
+      "alias": "mongodb"
+    },
+    {
+      "title": "Spring Boot",
+      "category": "Backend",
+      "type": "Framework",
+      "enabled": true,
+      "svg": "https://svgl.app/library/spring.svg",
+      "alias": "spring-boot"
+    },
+    {
+      "title": "JSON",
+      "category": "Frontend",
+      "type": "Data Format",
+      "enabled": true,
+      "svg": "https://svgl.app/library/json.svg",
+      "alias": "json"
+    },
+    {
+      "title": "Markdown",
+      "category": "Frontend",
+      "type": "Data Format",
+      "enabled": true,
+      "svg": "https://svgl.app/library/markdown-dark.svg",
+      "alias": "markdown"
+    },
+    {
+      "title": "Python",
+      "category": "Backend",
+      "type": "Language",
+      "enabled": true,
+      "svg": "https://svgl.app/library/python.svg",
+      "alias": "pyhton"
+    }
+  ]
+}
