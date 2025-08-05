@@ -1,12 +1,13 @@
 {
   "nombre": "Abdiel Bernal",
-  "email": "2apty507@gmail.com",
   "descripcion": "Soy desarrollador backend y participe en el proyecto Oracle ONE en Alura. Me apasiona la tecnología y estoy en constante aprendizaje de herramientas modernas como React y TailwindCSS.",
   "enlaces": [
     { "label": "GitHub", "url": "https://github.com/HellheimPTY" },
     { "label": "LinkedIn", "url": "#" },
-    { "label": "Instagram", "url": "#" },
-    { "label": "Currículum", "url": "#" }
+    { "label": "Correo", "url": "mailto:2apty507@gmail.com"},
+    { "label": "Currículum", "url": "#" },
+    { "label": "Instagram", "url": "#" }
+
   ],
  
   "proyectos": [
@@ -78,5 +79,6 @@
       "año": "2023 - 2024",
       "descripcion": "Mantenimiento y soporte técnico de sistemas operativos."
     }
-  ]
+  ],
+  "añoPie": "2025"
 }

@@ -14,7 +14,7 @@ export default function LogoInline({ theme }) {
         return url.replace(/\.svg$/i, "_dark.svg");
       } else {
         if (/_dark\.svg$/i.test(url)) {
-          return url.replace(/_dark\.svg$/i, ".svg");
+          return url.replace(/_dark\.svg$/i, "_light.svg");
         }
         return url;
       }
@@ -23,14 +23,14 @@ export default function LogoInline({ theme }) {
     if (theme === "dark") {
       return (
         logo.svg_dark ||
-        inferVariant(logo.svg_light || logo.svg, "dark") ||
+        inferVariant(logo.svg_light || logo.svg, "_dark") ||
         logo.svg ||
         ""
       );
     } else {
       return (
         logo.svg_light ||
-        inferVariant(logo.svg_dark || logo.svg, "light") ||
+        inferVariant(logo.svg_dark || logo.svg, "_light") ||
         logo.svg ||
         ""
       );
@@ -82,7 +82,7 @@ const backendDbGroup = logos.filter((l) =>
       {/* Segmento 1: Frontend */}
       {frontendGroup.length > 0 && (
         <div>
-          <h2 className="text-xl font-bold mb-3" id="frontend">
+          <h2 className="text-xl text-center font-bold mb-3">
             Frontend
           </h2>
           <Carousel className="py-2">
@@ -98,7 +98,7 @@ const backendDbGroup = logos.filter((l) =>
       {/* Segmento 2: Backend + Database */}
       {backendDbGroup.length > 0 && (
         <div>
-          <h2 className="text-xl font-bold mb-3" id="backend-db">
+          <h2 className="text-xl text-center font-bold mb-3">
             Backend &amp; Database
           </h2>
           <Carousel className="py-2">

@@ -16,15 +16,14 @@ export default function Home() {
  
         <Navbar className="hidden lg:block" />
     
-
-      <section className="mb-12">
+      <section className="m-12">
         <h2 className="text-2xl font-semibold mb-2">Sobre mí</h2>
         <p className="text-lg">{data.descripcion}</p>
 
         <div className="flex flex-wrap gap-4 mt-4">
 
           {data.enlaces.map((enlace, i) => (
-            <a key={i} href={enlace.url} className="underline text-sm">{enlace.label}</a>
+            <a key={i} href={enlace.url} target="_blank" className="underline text-sm">{enlace.label}</a>
           ))}
 
         </div>
