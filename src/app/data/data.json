@@ -9,23 +9,44 @@
     { "label": "Currículum", "url": "#" }
   ],
   "sobreMi": "Me apasiona la tecnología y me especializo en desarrollo backend y la ciberseguridad. Estoy en constante aprendizaje de herramientas modernas como React y TailwindCSS.",
-  "habilidades": ["HTML5", "CSS3", "JavaScript", "React", "Node.js", "Git", "TailwindCSS", "Java", "Python", "SQL", "Postman"],
+ 
   "formacion": [
     {
-      "titulo": "Análisis de Datos",
-      "institucion": "UFPR",
-      "año": "2018"
+      "titulo": "Python más Allá de lo Básico",
+     
+      "institucion": "Python Panamá",
+     
+      "año": "2025"
     },
+
     {
-      "titulo": "Formación UX Design",
+      "titulo": "Desarrollo de Software Backend Java",
+     
       "institucion": "Alura",
-      "año": "2019"
+     
+      "año": "2024"
     },
+
     {
-      "titulo": "Posgrado en Diseño",
-      "institucion": "UFRJ",
+      "titulo": "Técnico en Sistemas de Operativos",
+      
+      "institucion": "Clawing",
+
+      "año": "2024"
+    },
+
+    {
+      "titulo": "Licenciatura en Ingeniería de Ciberseguridad",
+     
+      "institucion": "Universidad del Istmo",
+     
       "año": "En curso"
     }
   ],
-  "añoPie": "2025"
+
+  "añoPie": "2025",
+ 
+  "colorFondo": "#123145",
+ 
+  "colorLetra": "#f1b930"
 }
