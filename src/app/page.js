@@ -18,7 +18,7 @@ export default function Home() {
     
 
       <section className="mb-12">
-
+        <h2 className="text-2xl font-semibold mb-2">Sobre mí</h2>
         <p className="text-lg">{data.descripcion}</p>
 
         <div className="flex flex-wrap gap-4 mt-4">
@@ -31,14 +31,6 @@ export default function Home() {
 
       </section>
 
-      <section className="mb-12">
-
-        <h2 className="text-2xl font-semibold mb-2">Sobre mí</h2>
-
-        <p className="text-sm leading-relaxed">{data.sobreMi}</p>
-
-      </section>
-
        {/* Skills Section */}
        <section className="my-10">
 
@@ -46,7 +38,24 @@ export default function Home() {
 
       <Logo/>
         </section>
-     
+
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold mb-4">Proyectos</h2>    
+        <Carousel className="w-full">
+          {data.proyectos.map((proyecto, i) => (
+            <CarouselItem key={i} className="p-4">
+              <Card>
+                <CardContent className="p-4">
+                  <h3 className="font-semibold">{proyecto.titulo}</h3>
+                  <p className="text-sm">{proyecto.descripcion}</p>
+                  <a href={proyecto.enlace} target="_blank" className="text-blue-500 underline">Ver proyecto</a>
+                </CardContent>
+              </Card>
+            </CarouselItem>
+          ))}
+        </Carousel>
+      </section>
+
       <section className="mb-12">
        
         <h2 className="text-2xl font-semibold mb-4">Formación académica</h2>
@@ -71,20 +80,41 @@ export default function Home() {
         </div>
 
       </section>
+      <section className="mb-12">
+       
+        <h2 className="text-2xl font-semibold mb-4">Experiencia laboral</h2>
+       
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+       
+          {data.experiencia.map((exp, i) => (
+       
+          <Card key={i}>
+        
+             <CardContent className="p-4">
+        
+                <p className="font-semibold">{exp.puesto}</p>
+                <p className="text-sm">{exp.descripcion}</p>
+                <p className="text-sm">{exp.año} - {exp.empresa}</p>
+        
+              </CardContent>
+        
+            </Card>
+        
+          ))}
+        </div>
+      </section>
 
       <section className="mb-12">
        
         <h2 className="text-2xl font-semibold mb-4">Contacto</h2>
        
         <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
-       
-          <Input placeholder="Asunto" className="md:col-span-2" />
           
           <Input placeholder="Nombre" />
        
           <Input placeholder="Correo electrónico" type="email" />
        
-          <Input placeholder="Asunto" className="md:col-span-2 rounded-md border border-ring text-sm shadow-sm hover:border-chart-2 focus:border-chart-1" />
+          <textarea placeholder= "Mensaje" className=" resize-none md:col-span-2 rounded-md border border-ring text-sm shadow-sm hover:border-chart-2 focus:border-chart-1" />
        
           <Button>Enviar mensaje</Button>
        
