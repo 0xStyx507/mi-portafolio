@@ -9,7 +9,7 @@ export default function Carousel({ children, className = "" }) {
   const scroll = (dir) => {
     const el = scrollRef.current;
     if (!el) return;
-    const amount = el.clientWidth * 0.6;
+    const amount = el.clientWidth * 2;
     el.scrollBy({ left: dir === "left" ? -amount : amount, behavior: "smooth" });
   };
 

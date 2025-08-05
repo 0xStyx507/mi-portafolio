@@ -20,7 +20,7 @@ export default function Home() {
         <h2 className="text-2xl font-semibold mb-2">Sobre mí</h2>
         <p className="text-lg">{data.descripcion}</p>
 
-        <div className="flex flex-wrap gap-4 mt-4">
+        <div className="">
 
           {data.enlaces.map((enlace, i) => (
             <a key={i} href={enlace.url} target="_blank" className="underline text-sm">{enlace.label}</a>
@@ -33,7 +33,7 @@ export default function Home() {
        {/* Skills Section */}
        <section className="my-10">
 
-      <h2 className="text-2xl font-bold mb-4">Habilidades</h2>
+      <h2 className="">Frontend</h2>
 
       <Logo/>
         </section>
@@ -124,6 +124,6 @@ export default function Home() {
       <footer className="text-center text-sm mt-12">
         Desarrollado por {data.nombre} - {data.añoPie}
       </footer>
-    </main>
+    </div>
   );
 }
