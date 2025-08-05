@@ -6,6 +6,7 @@ import { Button } from "../components/ui/Button.jsx";
 import React, { useRef } from "react";
 import Carousel, { CarouselItem } from "../components/ui/Carousel.jsx";
 import Navbar from "../components/ui/Navbar.jsx";
+import Logo from "../components/LogoInline.jsx";
 
 export default function Home() {
    
@@ -43,15 +44,8 @@ export default function Home() {
 
       <h2 className="text-2xl font-bold mb-4">Habilidades</h2>
 
-      <Carousel>
-
-        {data.habilidades.map((skill, i) => (
-          <CarouselItem key={i}>{skill}</CarouselItem>
-        ))}
-
-      </Carousel>
-
-      </section>
+      <Logo/>
+        </section>
      
       <section className="mb-12">
        
@@ -74,8 +68,6 @@ export default function Home() {
             </Card>
         
           ))}
-       
-       
         </div>
 
       </section>
@@ -86,13 +78,15 @@ export default function Home() {
        
         <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
        
+          <Input placeholder="Asunto" className="md:col-span-2" />
+          
           <Input placeholder="Nombre" />
        
           <Input placeholder="Correo electrónico" type="email" />
        
           <Input placeholder="Asunto" className="md:col-span-2 rounded-md border border-ring text-sm shadow-sm hover:border-chart-2 focus:border-chart-1" />
        
-          <Button className="w-full md:w-auto md:col-span-2">Enviar mensaje</Button>
+          <Button>Enviar mensaje</Button>
        
         </form>
 
