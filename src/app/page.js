@@ -12,7 +12,7 @@ export default function Home() {
    
   
   return (
-  <main className="min-h-screen px-4 py-8 md:px-16">
+  <div className="min-h-screen px-4 py-8 md:px-16">
  
         <Navbar className="hidden lg:block" />
     
@@ -20,7 +20,7 @@ export default function Home() {
         <h2 className="text-2xl font-semibold mb-2">Sobre mí</h2>
         <p className="text-lg">{data.descripcion}</p>
 
-        <div className="">
+        <div className="flex flex-wrap gap-4 mt-4">
 
           {data.enlaces.map((enlace, i) => (
             <a key={i} href={enlace.url} target="_blank" className="underline text-sm">{enlace.label}</a>
@@ -33,7 +33,7 @@ export default function Home() {
        {/* Skills Section */}
        <section className="my-10">
 
-      <h2 className="">Frontend</h2>
+        <h2 className="text-2xl font-bold mb-4">Habilidades</h2>
 
       <Logo/>
         </section>
