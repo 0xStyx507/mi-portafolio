@@ -24,7 +24,7 @@ export default function ThemeToggle() {
       onClick={() => setDark(d => !d)}
       className="px-3 py-2 rounded border"
     >
-    {dark ? "☀️ Claro" : "🌙 Oscuro"}
+    {dark ? "🌙 Oscuro":"☀️ Claro"}
     </button>
   );
 }
