@@ -32,11 +32,8 @@ export default function Home() {
 
        {/* Skills Section */}
        <section className="my-10">
-
-        <h2 className="text-2xl font-bold mb-4">Habilidades</h2>
-
-      <Logo/>
-        </section>
+        <Logo/>
+       </section>
 
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">Proyectos</h2>    
@@ -113,7 +110,7 @@ export default function Home() {
        
           <Input placeholder="Correo electrónico" type="email" />
        
-          <textarea placeholder= "Mensaje" className=" resize-none md:col-span-2 rounded-md border border-ring text-sm shadow-sm hover:border-chart-2 focus:border-chart-1" />
+          <textarea placeholder= "Mensaje" className=" resize-none md:col-span-2 rounded-md border border-ring text-sm shadow-sm placeholder:text-center focus:border-chart-1" />
        
           <Button>Enviar mensaje</Button>
        

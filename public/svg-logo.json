@@ -85,23 +85,6 @@
       "alias": "spring-boot"
     },
     {
-      "title": "JSON",
-      "category": "Frontend",
-      "type": "Formato de Datos",
-      "enabled": true,
-      "svg": "https://svgl.app/library/json.svg",
-      "alias": "json"
-    },
-    {
-      "title": "Markdown",
-      "category": "Frontend",
-      "type": "Formato de Datos",
-      "enabled": true,
-      "svg_light": "https://svgl.app/library/markdown-light.svg",
-      "svg_dark": "https://svgl.app/library/markdown-dark.svg",
-      "alias": "markdown"
-    },
-    {
       "title": "Python",
       "category": "Backend",
       "type": "Languaje",
@@ -127,37 +110,13 @@
       "alias": "github"
     },
     {
-      "title": "Next.js",
-      "category": "Fronted",
+    "title": "Next.js",
+      "category": "Frontend",
       "type": "Framework",
       "enabled": true,
-      "svg_light":"https://svgl.app/library/nextjs_logo_light.svg",
-      "svg_dark":"https://svgl.app/library/nextjs_logo_dark.svg", 
-      "alias": "netxjs"
-    },
-    {
-      "title": "Pycharm",
-      "category": "Backend",
-      "type": "IDE",
-      "enabled": true,
-      "svg":"https://svgl.app/library/pycharm.svg",
-      "alias": "pycharm"
-    },
-    {
-      "title": "VisualStudioCode",
-      "category": "Frontend",
-      "type": "IDE",
-      "enabled": true,
-      "svg":"https://svgl.app/library/vscode.svg", 
-      "alias": "vscode"
-    },
-    {
-      "title": "Intellij IDEA",
-      "category": "Backend",
-      "type": "IDE",
-      "enabled": true,
-      "svg_light":"https://svgl.app/library/intellijidea.svg",
-      "alias": "intellij-idea"
+      "svg_light": "https://svgl.app/library/nextjs_logo_light.svg",
+      "svg_dark": "https://svgl.app/library/nextjs_logo_dark.svg",
+      "alias": "nextjs"
     },
     {
       "title": "Postman",

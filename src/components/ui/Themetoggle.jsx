@@ -1,30 +1,18 @@
+// app/components/ThemeToggle.jsx
 "use client";
 
-import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 
 export default function ThemeToggle() {
-  const [dark, setDark] = useState(false);
-
-  useEffect(() => {
-    const stored = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    if (stored === "dark" || (!stored && prefersDark)) {
-      setDark(true);
-      document.documentElement.classList.add("dark");
-    }
-  }, []);
-
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", dark);
-    localStorage.setItem("theme", dark ? "dark" : "light");
-  }, [dark]);
+  const { theme, setTheme, systemTheme } = useTheme();
+  const current = theme === "system" ? systemTheme : theme;
 
   return (
     <button
-      onClick={() => setDark(d => !d)}
-      className="px-3 py-2 rounded border"
+      onClick={() => setTheme(current === "dark" ? "light" : "dark")}
+      className="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded"
     >
-    {dark ? "🌙 Oscuro":"☀️ Claro"}
+      {current === "dark" ? "☀️ Light" : "🌙 Dark"}
     </button>
   );
 }

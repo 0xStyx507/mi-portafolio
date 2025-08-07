@@ -1,139 +1,100 @@
 "use client";
+
 import { useEffect, useState } from "react";
-import Carousel, { CarouselItem } from "@/components/ui/Carousel"; // ruta exacta al carrusel
+import { useTheme } from "next-themes";
+import { Card, CardContent } from "@/components/ui/Card";
 
-export default function LogoInline({ theme }) {
+export default function LogoInline() {
   const [logos, setLogos] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  // Selecciona la URL correcta según el tema, con inferencia ligera
-  const getLogoUrl = (logo, theme) => {
-    const inferVariant = (url, target) => {
-      if (!url) return null;
-      if (target === "dark") {
-        if (/_dark\.svg$/i.test(url)) return url;
-        return url.replace(/\.svg$/i, "_dark.svg");
-      } else {
-        if (/_dark\.svg$/i.test(url)) {
-          return url.replace(/_dark\.svg$/i, "_light.svg");
-        }
-        return url;
-      }
-    };
+  // next-themes
+  const { theme, systemTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-    if (theme === "dark") {
-      return (
-        logo.svg_dark ||
-        inferVariant(logo.svg_light || logo.svg, "_dark") ||
-        logo.svg ||
-        ""
-      );
-    } else {
-      return (
-        logo.svg_light ||
-        inferVariant(logo.svg_dark || logo.svg, "_light") ||
-        logo.svg ||
-        ""
-      );
-    }
-  };
-
+  // Evita mismatches SSR—cliente sólo renderiza tras montar
   useEffect(() => {
-    fetch("/data/svg-logo.json")
-      .then((r) => r.json())
-      .then((data) => {
-        if (Array.isArray(data.logos)) {
-          // dedupe por alias conservando el primero
-          const seen = new Set();
-          const filtered = data.logos
-            .filter((l) => l.enabled !== false) // default true if missing
-            .filter((l) => {
-              if (!l.alias) return false;
-              if (seen.has(l.alias)) return false;
-              seen.add(l.alias);
-              return true;
-            });
-          setLogos(filtered);
-        }
-      })
-      .catch(console.warn);
+    setMounted(true);
   }, []);
 
-  if (!logos.length) return <div className="p-4">Cargando logos...</div>;
+  // Carga de JSON
+  useEffect(() => {
+    async function load() {
+      try {
+        const res = await fetch("/svg-logo.json", { cache: "no-store" });
+        const txt = (await res.text()).replace(/^\uFEFF/, "").trim();
+        if (!res.ok) throw new Error(res.statusText);
+        const data = JSON.parse(txt);
+        const raw = Array.isArray(data) ? data : data.logos || [];
+        const seen = new Set();
+        const filtered = raw
+          .filter((l) => l.enabled !== false && l.alias)
+          .filter((l) => {
+            if (seen.has(l.alias)) return false;
+            seen.add(l.alias);
+            return true;
+          });
+        setLogos(filtered);
+      } catch (err) {
+        console.error("Error cargando JSON:", err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    load();
+  }, []);
 
-  // Agrupaciones
-// Frontend group: incluye IDEs con usage "frontend" o "all"
-const frontendGroup = logos.filter((l) =>
-  ["Frontend", "Version Control", "Tool", "Software",""].includes(l.category) ||
-  (l.type === "IDE" && (l.usage === "frontend" || l.usage === "all"))
-);
+  if (!mounted) return null; // o un placeholder de tema
+  if (loading) return <div className="p-4 text-center">Cargando logos…</div>;
 
-// Backend+DB group: incluye IDEs con usage "backend" además de Backend/Database
-const backendDbGroup = logos.filter((l) =>
-  l.category === "Backend" ||
-  l.category === "Database" ||
-  (l.type === "IDE" && l.usage === "backend") ||
-  l.type === "Language" && l.category === "Backend" ||
-  l.type === "Database"
-);
-
+  // Determina el tema real
+  const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
-    <div className="space-y-10">
-      {/* Segmento 1: Frontend */}
-      {frontendGroup.length > 0 && (
-        <div>
-          <h2 className="text-xl text-center font-bold mb-3">
-            Frontend
-          </h2>
-          <Carousel className="py-2">
-            {frontendGroup.map((logo) => (
-              <CarouselItem key={logo.alias} className="max-w-[140px]">
-                <LogoCard logo={logo} theme={theme} getLogoUrl={getLogoUrl} />
-              </CarouselItem>
-            ))}
-          </Carousel>
-        </div>
-      )}
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+      {logos.map((logo) => {
+        // Elige URL según tema, con fallback a `svg`
+        const src =
+          currentTheme === "dark"
+            ? logo.svg_dark || logo.svg || logo.svg_light
+            : logo.svg_light || logo.svg || logo.svg_dark;
 
-      {/* Segmento 2: Backend + Database */}
-      {backendDbGroup.length > 0 && (
-        <div>
-          <h2 className="text-xl text-center font-bold mb-3">
-            Backend &amp; Database
-          </h2>
-          <Carousel className="py-2">
-            {backendDbGroup.map((logo) => (
-              <CarouselItem key={logo.alias} className="max-w-[140px]">
-                <LogoCard logo={logo} theme={theme} getLogoUrl={getLogoUrl} />
-              </CarouselItem>
-            ))}
-          </Carousel>
-        </div>
-      )}
+        return (
+          <Card key={`${logo.alias}-${currentTheme}`} className="hover:shadow-lg">
+            <CardContent className="flex flex-col items-center py-4">
+              <LogoItem logo={logo} src={src} />
+            </CardContent>
+          </Card>
+        );
+      })}
     </div>
   );
 }
 
-function LogoCard({ logo, theme, getLogoUrl }) {
+function LogoItem({ logo, src }) {
   const [errored, setErrored] = useState(false);
-  const src = getLogoUrl(logo, theme);
+
+  // Reset de error al cambiar la URL
+  useEffect(() => {
+    setErrored(false);
+  }, [src]);
 
   return (
-    <div className="flex flex-col items-center p-3 ">
+    <div className="flex flex-col items-center">
       {!errored && src ? (
         <img
           src={src}
           alt={logo.title}
-          className="w-16 h-16 object-contain mb-2"
+          className="w-12 h-12 object-contain mb-2"
           loading="lazy"
           onError={() => setErrored(true)}
         />
       ) : (
-        <div className="w-16 h-16 flex items-center justify-center mb-2 text-[10px] text-center">
+        <div className="w-12 h-12 flex items-center justify-center mb-2 text-xs text-center">
           {logo.title}
         </div>
       )}
-      <div className="text-xs font-medium py-2">{logo.title}</div>
+      <div className="text-sm font-medium">{logo.title}</div>
       <div className="text-[10px]">{logo.type}</div>
     </div>
   );
