@@ -1,6 +1,8 @@
 import { PortfolioData } from "../model/types";
 
 const PORTFOLIO_DATA_PATH = "/data.json";
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const PORTFOLIO_DATA_PATH = `${BASE_PATH}/data.json`;
 
 export class PortfolioDataService {
   private static instance: PortfolioDataService;
