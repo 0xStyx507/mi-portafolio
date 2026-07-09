@@ -19,10 +19,10 @@ export default function AboutSection({ descripcion, enlaces, id = "about" }: Abo
                         <div className="space-y-4">
                             <span className="section-label">Senior Build / 1998 Signal</span>
                             <p className="max-w-xl text-sm uppercase tracking-[0.24em] text-muted-foreground">
-                                {TEXTS.ABOUT_TITLE} / fullstack delivery / aws-aware build
+                                {TEXTS.ABOUT_TITLE} Full Stack Delivery / Backend Focus / AWS-Aware Build
                             </p>
-                            <h2 className="title-display max-w-4xl text-5xl text-primary md:text-7xl">
-                                Portafolio con criterio de ingeniería, no solo presencia visual.
+                            <h2 className="title-display max-w-4xl text-5xl text-primary md:text-6xl">
+                                Portafolio orientado a soluciones reales, mantenibilidad, documentación técnica y evolución hacia backend, cloud y seguridad aplicada.
                             </h2>
                         </div>
 
@@ -59,24 +59,24 @@ export default function AboutSection({ descripcion, enlaces, id = "about" }: Abo
 
                         <div className="section-shell p-5">
                             <p className="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-secondary">
-                                Señales de seniority
+                                Señales de madurez técnica
                             </p>
                             <div className="grid grid-cols-2 gap-3 text-sm">
                                 <div className="border border-border bg-background/70 p-3">
-                                    <p className="text-2xl font-bold text-primary">01</p>
-                                    <p className="mt-2 text-muted-foreground">Arquitectura y claridad.</p>
+                                    <p className="text-lg font-bold text-primary">01 Mantenibilidad</p>
+                                    <p className="mt-2 text-muted-foreground">Estructuro los proyectos pensando en escalabilidad, separación de responsabilidades y facilidad de mantenimiento.</p>
                                 </div>
                                 <div className="border border-border bg-background/70 p-3">
-                                    <p className="text-2xl font-bold text-primary">02</p>
-                                    <p className="mt-2 text-muted-foreground">Entrega enfocada en impacto.</p>
+                                    <p className="text-lg font-bold text-primary">02 Documentación técnica</p>
+                                    <p className="mt-2 text-muted-foreground">Valoro la documentación clara para facilitar soporte, continuidad del proyecto y comunicación entre equipos.</p>
                                 </div>
                                 <div className="border border-border bg-background/70 p-3">
-                                    <p className="text-2xl font-bold text-primary">03</p>
-                                    <p className="mt-2 text-muted-foreground">Seguridad como criterio transversal.</p>
+                                    <p className="text-lg font-bold text-primary">03 Seguridad aplicada</p>
+                                    <p className="mt-2 text-muted-foreground">Integro buenas prácticas de seguridad desde etapas tempranas, especialmente en APIs, accesos, validaciones y revisión de riesgos.</p>
                                 </div>
                                 <div className="border border-border bg-background/70 p-3">
-                                    <p className="text-2xl font-bold text-primary">04</p>
-                                    <p className="mt-2 text-muted-foreground">Frontend con intención, no plantilla.</p>
+                                    <p className="text-lg font-bold text-primary">04 Visión de entrega</p>
+                                    <p className="mt-2 text-muted-foreground">No me enfoco solo en construir funcionalidades, sino en que puedan desplegarse, mantenerse y evolucionar correctamente.</p>
                                 </div>
                             </div>
                         </div>

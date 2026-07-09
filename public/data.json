@@ -1,36 +1,139 @@
 {
   "nombre": "Abdiel Bernal",
-  "descripcion": "Soy desarrollador fullstack con conocimiento en AWS, interés activo en ciberseguridad y enfoque en construir productos web útiles y mantenibles. Formé parte del proyecto Oracle ONE en Alura y mantengo una ruta constante de aprendizaje en desarrollo, automatización y herramientas modernas como React y Tailwind CSS.",
+  "descripcion": "Desarrollador Full Stack Jr con orientación fuerte a Backend, APIs REST, ciberseguridad aplicada y cloud. Experiencia práctica en desarrollo, mantenimiento de aplicaciones, validación de APIs, documentación técnica, revisión de seguridad e integración entre servicios. Actualmente refuerzo conocimientos en AWS Development, arquitectura cloud, automatización y buenas prácticas para construir soluciones web mantenibles, seguras y escalables.",
   "enlaces": [
     {
       "label": "GitHub",
-      "url": "https://github.com/HellheimPTY"
+      "url": "https://github.com/0xStyx507"
     },
     {
       "label": "Correo",
       "url": "mailto:2apty507@gmail.com"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/abdiel-bernal/"
+    },
+    {
+      "label": "Currículum",
+      "url": "https://docs.google.com/document/d/1mlSndpNCl13XjpbfmlsVNs9PNHDv_sUBbO24w8Xk0JY/edit?usp=sharing"
+    }
+  ],
+  "skills": [
+    {
+      "titulo": "Backend Development",
+      "enfoque": "APIs, lógica de negocio y servicios",
+      "descripcion": "Construcción y mantenimiento de servicios backend, APIs REST, validaciones, manejo de errores y documentación técnica.",
+      "herramientas": [
+        "Node.js",
+        "Nest.js",
+        "Java",
+        "Spring Boot",
+        "APIs REST",
+        "JWT",
+        "Mongoose"
+      ]
+    },
+    {
+      "titulo": "Frontend & UI",
+      "enfoque": "Interfaces modernas y mantenibles",
+      "descripcion": "Desarrollo de interfaces web con componentes reutilizables, estructura clara y experiencia visual adaptable.",
+      "herramientas": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
+    },
+    {
+      "titulo": "Cloud & Deploy",
+      "enfoque": "Fundamentos cloud y despliegue",
+      "descripcion": "Familiaridad con servicios cloud, despliegue de aplicaciones, revisión de logs y configuración básica de entornos.",
+      "herramientas": [
+        "AWS",
+        "EC2",
+        "S3",
+        "Lambda",
+        "API Gateway",
+        "CloudWatch",
+        "Vercel"
+      ]
+    },
+    {
+      "titulo": "Security Applied",
+      "enfoque": "Seguridad aplicada al desarrollo",
+      "descripcion": "Revisión de APIs, buenas prácticas de seguridad, análisis de hallazgos y documentación técnica de riesgos.",
+      "herramientas": [
+        "OWASP Top 10",
+        "SonarQube",
+        "API Security",
+        "Access Control",
+        "Secure Coding",
+        "Kali Linux"
+      ]
+    },
+    {
+      "titulo": "DevOps Foundations",
+      "enfoque": "Automatización y ciclo de entrega",
+      "descripcion": "Bases de automatización, control de versiones, contenedores, pipelines y validaciones en el ciclo de desarrollo.",
+      "herramientas": [
+        "Git",
+        "GitHub",
+        "GitHub Actions",
+        "Docker",
+        "CI/CD",
+        "Environment Variables",
+        "Logs"
+      ]
+    },
+    {
+      "titulo": "Databases & Tools",
+      "enfoque": "Persistencia y herramientas de trabajo",
+      "descripcion": "Manejo de bases de datos relacionales y NoSQL, herramientas de desarrollo y soporte al flujo técnico diario.",
+      "herramientas": [
+        "MongoDB",
+        "MySQL",
+        "PostgreSQL",
+        "Firebase",
+        "Supabase",
+        "Postman",
+        "VS Code"
+      ]
     }
   ],
   "proyectos": [
     {
-      "titulo": "Encriptador de Texto",
-      "descripcion": "Proyecto realizado dentro del recorrido de Oracle ONE, enfocado en lógica de transformación de texto y experiencia web clara para el usuario.",
-      "enlace": "https://hellheimpty.github.io/encriptador_de_texto_ONE/"
+      "titulo": "Backend Node.js API",
+      "descripcion": "API REST construida con Node.js, Express y MongoDB, enfocada en operaciones CRUD, estructura backend, validación de datos y persistencia con Mongoose. Proyecto en mejora progresiva hacia documentación técnica, testing, Docker y seguridad básica.",
+      "enlace": "https://github.com/0xStyx507/crud-node"
     },
     {
-      "titulo": "Conversor de Monedas",
-      "descripcion": "Aplicación web orientada a resolver una necesidad concreta con una interfaz simple y una lógica clara de conversión.",
-      "enlace": "https://github.com/HellheimPTY/Conversor-Moneda"
+      "titulo": "Portafolio Personal",
+      "descripcion": "Portafolio profesional desarrollado con Next.js, TypeScript y Tailwind CSS, estructurado por componentes y datos editables desde JSON para presentar experiencia, formación, proyectos y habilidades técnicas.",
+      "enlace": "https://github.com/0xStyx507/mi-portafolio"
     },
     {
-      "titulo": "Amigo Secreto",
-      "descripcion": "Aplicación para registrar participantes y realizar un sorteo aleatorio de forma rápida y comprensible.",
-      "enlace": "https://hellheimpty.github.io/Amigo-Secreto/"
+      "titulo": "Java Sockets Cliente-Servidor",
+      "descripcion": "Proyecto en Java orientado a comunicación cliente-servidor mediante sockets, donde un servidor escucha conexiones y un cliente envía mensajes a través de IP y puerto. Refuerza fundamentos de redes, comunicación entre sistemas y arquitectura distribuida básica.",
+      "enlace": "https://github.com/0xStyx507/SoketsJava"
     },
     {
-      "titulo": "Menú Semanal",
-      "descripcion": "Aplicación donde el usuario selecciona un día, revisa el menú disponible, elige comidas y calcula el total a pagar.",
-      "enlace": "https://github.com/HellheimPTY/Menu-Restaurante"
+      "titulo": "Chat WebSocket Bidireccional",
+      "descripcion": "Aplicación de comunicación en tiempo real basada en WebSocket, enfocada en intercambio bidireccional de mensajes entre cliente y servidor. Proyecto útil para demostrar fundamentos de eventos, conexiones persistentes e interacción en tiempo real.",
+      "enlace": "https://github.com/0xStyx507/Chat_WebSocket_Bidireccional"
+    },
+    {
+      "titulo": "Consumo de API Externa",
+      "descripcion": "Proyecto práctico enfocado en consumo de servicios externos, manejo de respuestas HTTP e integración de datos desde APIs. Refuerza fundamentos necesarios para desarrollo backend, integraciones y comunicación entre sistemas.",
+      "enlace": "https://github.com/0xStyx507/consume_API"
+    },
+    {
+      "titulo": "Foro Alura Backend",
+      "descripcion": "Proyecto backend desarrollado como parte de la formación Oracle ONE / Alura, orientado a la construcción de una solución tipo foro con lógica de dominio, persistencia de datos y estructura de aplicación backend.",
+      "enlace": "https://github.com/0xStyx507/Foro_Alura"
     }
   ],
   "formacion": [
@@ -40,8 +143,8 @@
       "año": "2025"
     },
     {
-      "titulo": "Desarrollo de Software Backend Java",
-      "institucion": "Alura",
+      "titulo": "Java Backend Jr Dev",
+      "institucion": "Oracle Next Education / Alura",
       "año": "2024"
     },
     {
@@ -67,23 +170,11 @@
   ],
   "experiencia": [
     {
-      "puesto": "Desarrollador Backend",
-      "empresa": "Oracle ONE",
-      "año": "2024 - Presente",
-      "descripcion": "Participación en procesos de formación y desarrollo con enfoque backend dentro del programa Oracle ONE."
-    },
-    {
-      "puesto": "Técnico en Sistemas de Operativos",
-      "empresa": "Clawing",
-      "año": "2023 - 2024",
-      "descripcion": "Mantenimiento, soporte técnico y resolución de incidencias relacionadas con sistemas operativos."
-    },
-    {
-      "puesto": "Desarrollador Full Stack",
-      "empresa": "Money Free Flex",
-      "año": "2024 - Presente",
-      "descripcion": "Desarrollo de aplicaciones web utilizando herramientas y frameworks modernos con enfoque práctico."
+      "puesto": "Tester de Software / Funciones orientadas a Desarrollo, Soporte Técnico y Seguridad Aplicada",
+      "empresa": "MultimoneyCo S.A.",
+      "año": "nov. 2024 - actualidad",
+      "descripcion": "Participación en desarrollo, mantenimiento de aplicaciones, validación de APIs, documentación técnica, revisión de seguridad, soporte a cambios e integración entre servicios."
     }
   ],
-  "añoPie": "2025"
+  "añoPie": "2026"
 }

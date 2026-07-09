@@ -32,11 +32,10 @@ export default function PortfolioPage(): React.ReactElement {
       <Navbar />
 
       <AboutSection descripcion={data.descripcion} enlaces={data.enlaces} />
-      <SkillsSection />
+      <SkillsSection skills={data.skills} />
       <ProjectsSection proyectos={data.proyectos} />
       <EducationSection formacion={data.formacion} />
       <ExperienceSection experiencia={data.experiencia} />
-      <ContactSection emailDestino={emailDestino} />
       <FooterSection nombre={data.nombre} añoPie={data.añoPie} />
     </div>
   );

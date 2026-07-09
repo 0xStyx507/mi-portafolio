@@ -2,7 +2,12 @@ export interface PortfolioLink {
   label: string;
   url: string;
 }
-
+export interface SkillGroup {
+  titulo: string;
+  enfoque: string;
+  descripcion: string;
+  herramientas: string[];
+}
 export interface Project {
   titulo: string;
   descripcion: string;
@@ -27,6 +32,7 @@ export interface PortfolioData {
   descripcion: string;
   enlaces: PortfolioLink[];
   proyectos: Project[];
+  skills: SkillGroup[];
   formacion: Education[];
   experiencia: Experience[];
   añoPie: string;

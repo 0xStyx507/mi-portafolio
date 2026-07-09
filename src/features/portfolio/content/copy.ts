@@ -17,6 +17,5 @@ export const CONFIG = {
     { href: "#proyectos", label: TEXTS.PROJECTS_TITLE },
     { href: "#formacion", label: TEXTS.EDUCATION_TITLE },
     { href: "#experiencia", label: TEXTS.EXPERIENCE_TITLE },
-    { href: "#contacto", label: TEXTS.CONTACT_TITLE },
   ] as const,
 } as const;
