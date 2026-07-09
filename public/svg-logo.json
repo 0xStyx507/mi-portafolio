@@ -119,6 +119,14 @@
       "alias": "nextjs"
     },
     {
+      "title": "NestJS",
+      "category": "Backend",
+      "type": "Framework",
+      "enabled": true,
+      "svg_light": "https://svgl.app/library/nestjs.svg",
+      "alias": "nestjs"
+    },
+    {
       "title": "Postman",
       "category": "Backend",
       "type": "Herramienta",

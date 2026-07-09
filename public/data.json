@@ -1,0 +1,89 @@
+{
+  "nombre": "Abdiel Bernal",
+  "descripcion": "Soy desarrollador fullstack con conocimiento en AWS, interés activo en ciberseguridad y enfoque en construir productos web útiles y mantenibles. Formé parte del proyecto Oracle ONE en Alura y mantengo una ruta constante de aprendizaje en desarrollo, automatización y herramientas modernas como React y Tailwind CSS.",
+  "enlaces": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/HellheimPTY"
+    },
+    {
+      "label": "Correo",
+      "url": "mailto:2apty507@gmail.com"
+    }
+  ],
+  "proyectos": [
+    {
+      "titulo": "Encriptador de Texto",
+      "descripcion": "Proyecto realizado dentro del recorrido de Oracle ONE, enfocado en lógica de transformación de texto y experiencia web clara para el usuario.",
+      "enlace": "https://hellheimpty.github.io/encriptador_de_texto_ONE/"
+    },
+    {
+      "titulo": "Conversor de Monedas",
+      "descripcion": "Aplicación web orientada a resolver una necesidad concreta con una interfaz simple y una lógica clara de conversión.",
+      "enlace": "https://github.com/HellheimPTY/Conversor-Moneda"
+    },
+    {
+      "titulo": "Amigo Secreto",
+      "descripcion": "Aplicación para registrar participantes y realizar un sorteo aleatorio de forma rápida y comprensible.",
+      "enlace": "https://hellheimpty.github.io/Amigo-Secreto/"
+    },
+    {
+      "titulo": "Menú Semanal",
+      "descripcion": "Aplicación donde el usuario selecciona un día, revisa el menú disponible, elige comidas y calcula el total a pagar.",
+      "enlace": "https://github.com/HellheimPTY/Menu-Restaurante"
+    }
+  ],
+  "formacion": [
+    {
+      "titulo": "Python más Allá de lo Básico",
+      "institucion": "Python Panamá",
+      "año": "2025"
+    },
+    {
+      "titulo": "Desarrollo de Software Backend Java",
+      "institucion": "Alura",
+      "año": "2024"
+    },
+    {
+      "titulo": "Técnico en Sistemas de Operativos",
+      "institucion": "Clawing",
+      "año": "2024"
+    },
+    {
+      "titulo": "Analista SOC 1",
+      "institucion": "Comunidad DOJO",
+      "año": "2025"
+    },
+    {
+      "titulo": "Bootcamp Check Point R82",
+      "institucion": "Comunidad DOJO + Check Point",
+      "año": "2026"
+    },
+    {
+      "titulo": "Licenciatura en Ingeniería de Ciberseguridad",
+      "institucion": "Universidad del Istmo",
+      "año": "En curso"
+    }
+  ],
+  "experiencia": [
+    {
+      "puesto": "Desarrollador Backend",
+      "empresa": "Oracle ONE",
+      "año": "2024 - Presente",
+      "descripcion": "Participación en procesos de formación y desarrollo con enfoque backend dentro del programa Oracle ONE."
+    },
+    {
+      "puesto": "Técnico en Sistemas de Operativos",
+      "empresa": "Clawing",
+      "año": "2023 - 2024",
+      "descripcion": "Mantenimiento, soporte técnico y resolución de incidencias relacionadas con sistemas operativos."
+    },
+    {
+      "puesto": "Desarrollador Full Stack",
+      "empresa": "Money Free Flex",
+      "año": "2024 - Presente",
+      "descripcion": "Desarrollo de aplicaciones web utilizando herramientas y frameworks modernos con enfoque práctico."
+    }
+  ],
+  "añoPie": "2025"
+}
