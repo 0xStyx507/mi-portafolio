@@ -1,172 +1,191 @@
 {
   "nombre": "Abdiel Bernal",
-  "descripcion": "Desarrollador Full Stack Jr con orientación fuerte a Backend, APIs REST, ciberseguridad aplicada y cloud. Experiencia práctica en desarrollo, mantenimiento de aplicaciones, validación de APIs, documentación técnica, revisión de seguridad e integración entre servicios. Actualmente refuerzo conocimientos en AWS Development, arquitectura cloud, automatización y buenas prácticas para construir soluciones web mantenibles, seguras y escalables.",
+  "descripcion": "Desarrollador Full Stack Jr con orientación fuerte a Backend, APIs REST, ciberseguridad aplicada y cloud. Experiencia práctica en desarrollo, mantenimiento de aplicaciones, validación de APIs, documentación técnica, revisión de seguridad e integración entre servicios.",
   "enlaces": [
-    {
-      "label": "GitHub",
-      "url": "https://github.com/0xStyx507"
-    },
-    {
-      "label": "Correo",
-      "url": "mailto:2apty507@gmail.com"
-    },
-    {
-      "label": "LinkedIn",
-      "url": "https://www.linkedin.com/in/abdiel-bernal/"
-    },
-    {
-      "label": "Currículum",
-      "url": "https://docs.google.com/document/d/1mlSndpNCl13XjpbfmlsVNs9PNHDv_sUBbO24w8Xk0JY/edit?usp=sharing"
-    }
+    { "label": "GitHub", "url": "https://github.com/0xStyx507" },
+    { "label": "Correo", "url": "mailto:2apty507@gmail.com" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/abdiel-bernal/" },
+    { "label": "Currículum", "url": "https://docs.google.com/document/d/1mlSndpNCl13XjpbfmlsVNs9PNHDv_sUBbO24w8Xk0JY/edit?usp=sharing" }
   ],
   "skills": [
     {
       "titulo": "Backend Development",
       "enfoque": "APIs, lógica de negocio y servicios",
       "descripcion": "Construcción y mantenimiento de servicios backend, APIs REST, validaciones, manejo de errores y documentación técnica.",
-      "herramientas": [
-        "Node.js",
-        "Nest.js",
-        "Java",
-        "Spring Boot",
-        "APIs REST",
-        "JWT",
-        "Mongoose"
-      ]
+      "herramientas": ["Node.js", "Nest.js", "Java", "Spring Boot", "APIs REST", "JWT", "Mongoose"]
     },
     {
       "titulo": "Frontend & UI",
       "enfoque": "Interfaces modernas y mantenibles",
       "descripcion": "Desarrollo de interfaces web con componentes reutilizables, estructura clara y experiencia visual adaptable.",
-      "herramientas": [
-        "Next.js",
-        "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "HTML",
-        "CSS",
-        "JavaScript"
-      ]
+      "herramientas": ["Next.js", "React", "TypeScript", "Tailwind CSS", "HTML", "CSS", "JavaScript"]
     },
     {
       "titulo": "Cloud & Deploy",
       "enfoque": "Fundamentos cloud y despliegue",
       "descripcion": "Familiaridad con servicios cloud, despliegue de aplicaciones, revisión de logs y configuración básica de entornos.",
-      "herramientas": [
-        "AWS",
-        "EC2",
-        "S3",
-        "Lambda",
-        "API Gateway",
-        "CloudWatch",
-        "Vercel"
-      ]
+      "herramientas": ["AWS", "EC2", "S3", "Lambda", "API Gateway", "CloudWatch", "Vercel"]
     },
     {
       "titulo": "Security Applied",
       "enfoque": "Seguridad aplicada al desarrollo",
       "descripcion": "Revisión de APIs, buenas prácticas de seguridad, análisis de hallazgos y documentación técnica de riesgos.",
-      "herramientas": [
-        "OWASP Top 10",
-        "SonarQube",
-        "API Security",
-        "Access Control",
-        "Secure Coding",
-        "Kali Linux"
-      ]
+      "herramientas": ["OWASP Top 10", "SonarQube", "API Security", "Access Control", "Secure Coding", "Kali Linux"]
     },
     {
       "titulo": "DevOps Foundations",
       "enfoque": "Automatización y ciclo de entrega",
       "descripcion": "Bases de automatización, control de versiones, contenedores, pipelines y validaciones en el ciclo de desarrollo.",
-      "herramientas": [
-        "Git",
-        "GitHub",
-        "GitHub Actions",
-        "Docker",
-        "CI/CD",
-        "Environment Variables",
-        "Logs"
-      ]
+      "herramientas": ["Git", "GitHub", "GitHub Actions", "Docker", "CI/CD", "Environment Variables", "Logs"]
     },
     {
       "titulo": "Databases & Tools",
       "enfoque": "Persistencia y herramientas de trabajo",
       "descripcion": "Manejo de bases de datos relacionales y NoSQL, herramientas de desarrollo y soporte al flujo técnico diario.",
-      "herramientas": [
-        "MongoDB",
-        "MySQL",
-        "PostgreSQL",
-        "Firebase",
-        "Supabase",
-        "Postman",
-        "VS Code"
-      ]
+      "herramientas": ["MongoDB", "MySQL", "PostgreSQL", "Firebase", "Supabase", "Postman", "VS Code"]
     }
   ],
   "proyectos": [
     {
-      "titulo": "Backend Node.js API",
-      "descripcion": "API REST construida con Node.js, Express y MongoDB, enfocada en operaciones CRUD, estructura backend, validación de datos y persistencia con Mongoose. Proyecto en mejora progresiva hacia documentación técnica, testing, Docker y seguridad básica.",
-      "enlace": "https://github.com/0xStyx507/crud-node"
+      "slug": "secure-service-desk",
+      "title": "Secure Service Desk API",
+      "summary": "API de service desk con NestJS, MongoDB, GridFS, Redis y BullMQ, acompañada de frontend demo y controles de seguridad aplicados.",
+      "featured": true,
+      "categories": ["Full Stack", "Backend", "Node.js", "Ciberseguridad", "DevSecOps", "Cloud"],
+      "status": "in-development",
+      "origin": "personal",
+      "stack": ["TypeScript", "NestJS", "MongoDB", "Mongoose", "GridFS", "Redis", "BullMQ", "React", "Vite", "Docker"],
+      "architecture": "Frontend/Nginx → API NestJS → MongoDB/GridFS y Redis/BullMQ",
+      "patterns": ["Modular architecture", "Repository", "Outbox", "Worker processes"],
+      "problem": "Construir una base de service desk segura y operable para gestionar tickets, adjuntos, auditoría y notificaciones.",
+      "solution": "Separación entre API y workers, MongoDB como fuente de verdad, Redis reconstruible y flujos explícitos de autenticación, autorización y procesamiento asíncrono.",
+      "technicalDecisions": ["TypeScript estricto", "JWT RS256 con refresh HttpOnly", "MCP con flujo prepare → confirm/cancel", "Nginx como reverse proxy"],
+      "security": ["RBAC y autorización por recurso", "CSRF, MFA TOTP y step-up", "Validación de adjuntos JPEG/PNG", "Auditoría, Trivy, Dependabot y OWASP ZAP report-only"],
+      "testing": ["Lint y typecheck", "Pruebas unitarias, cobertura, E2E e integración con contenedores desechables", "Exportación OpenAPI"],
+      "cicd": ["Docker Compose", "GitHub Actions", "Trivy", "Dependabot"],
+      "learnings": ["Diseño de servicios seguros", "Procesamiento con colas", "Separación entre persistencia principal y cache"],
+      "limitations": ["MVP monoinquilino", "ZAP aún report-only", "Adaptadores cloud pendientes de smoke real"],
+      "nextSteps": ["Validar integraciones cloud en entorno real", "Completar hardening operativo", "Ampliar cobertura funcional"],
+      "repositoryUrl": "https://github.com/0xStyx507/secure-service-desk"
     },
     {
-      "titulo": "Portafolio Personal",
-      "descripcion": "Portafolio profesional desarrollado con Next.js, TypeScript y Tailwind CSS, estructurado por componentes y datos editables desde JSON para presentar experiencia, formación, proyectos y habilidades técnicas.",
-      "enlace": "https://github.com/0xStyx507/mi-portafolio"
+      "slug": "developer-community-platform",
+      "title": "Developer Community Platform",
+      "summary": "Plataforma full-stack para publicaciones, respuestas, etiquetas y colaboración técnica, con backend seguro y frontend inicial.",
+      "featured": true,
+      "categories": ["Full Stack", "Backend", "Java", "DevSecOps"],
+      "status": "in-development",
+      "origin": "personal",
+      "stack": ["Java 21", "Spring Boot 3.3.5", "Spring Security", "JPA", "PostgreSQL 16", "Flyway", "Next.js 14", "React 18", "TypeScript", "Docker"],
+      "architecture": "Clean Architecture pragmática con dominio, aplicación, adaptadores e infraestructura",
+      "patterns": ["Repository", "Service", "DTO", "Strategy"],
+      "problem": "Crear una base evolutiva para una comunidad de desarrolladores sin mezclar dominio, transporte HTTP y persistencia.",
+      "solution": "Backend con separación explícita de responsabilidades, autenticación con sesiones seguras y frontend Next.js para explorar y gestionar contenido.",
+      "technicalDecisions": ["Java 21 y Spring Boot", "Migraciones con Flyway", "PostgreSQL para persistencia", "Node.js 22 en CI"],
+      "security": ["JWT y refresh token en cookie HttpOnly", "BCrypt", "Validación Jakarta Bean Validation", "Auditoría de eventos relevantes"],
+      "testing": ["Health checks", "Contrato OpenAPI", "Validaciones automatizadas del backend en CI"],
+      "cicd": ["Docker Compose", "GitHub Actions", "PostgreSQL en desarrollo y CI"],
+      "learnings": ["Diseño de Clean Architecture", "Separación de contratos mediante DTOs", "Autorización como política reemplazable"],
+      "limitations": ["Frontend inicial", "Plataforma en evolución activa"],
+      "nextSteps": ["Completar experiencia del frontend", "Ampliar pruebas de integración", "Agregar observabilidad de producción"],
+      "repositoryUrl": "https://github.com/0xStyx507/Developer-Community-Platform"
     },
     {
-      "titulo": "Java Sockets Cliente-Servidor",
-      "descripcion": "Proyecto en Java orientado a comunicación cliente-servidor mediante sockets, donde un servidor escucha conexiones y un cliente envía mensajes a través de IP y puerto. Refuerza fundamentos de redes, comunicación entre sistemas y arquitectura distribuida básica.",
-      "enlace": "https://github.com/0xStyx507/SoketsJava"
+      "slug": "mi-portafolio",
+      "title": "Portafolio Personal",
+      "summary": "Catálogo técnico construido con Next.js, React, TypeScript y Tailwind CSS, con contenido editable desde JSON y filtros por especialidad y estado.",
+      "featured": true,
+      "categories": ["Full Stack", "Frontend", "TypeScript"],
+      "status": "in-development",
+      "origin": "personal",
+      "stack": ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS 4", "next-themes", "pnpm"],
+      "architecture": "App Router con arquitectura modular orientada a features",
+      "patterns": ["Feature-based architecture", "Data service", "Runtime validation"],
+      "problem": "Presentar proyectos y decisiones técnicas en un catálogo escalable, no en una lista fija de repositorios.",
+      "solution": "Separar el contenido de la UI, validar el JSON antes de renderizar y ofrecer clasificación por especialidad, origen y estado.",
+      "technicalDecisions": ["Target ES2022", "Next.js App Router", "JSON como fuente editable", "Componentes accesibles y responsive"],
+      "security": ["No almacenar secretos", "Validar la forma de los datos antes de renderizar", "Enlaces externos con noopener"],
+      "testing": ["ESLint", "Build de producción", "Revisión manual de filtros, navegación y estados de carga"],
+      "cicd": ["GitHub", "pnpm", "Despliegue estático preparado"],
+      "learnings": ["Desacoplamiento entre contenido y presentación", "Diseño UI retro-técnico", "Refactor con TypeScript estricto"],
+      "limitations": ["Las capturas y diagramas aún no están integrados", "No hay suite E2E en el repositorio"],
+      "nextSteps": ["Incorporar pruebas automatizadas", "Agregar capturas reales por proyecto", "Publicar una demo estable"],
+      "repositoryUrl": "https://github.com/0xStyx507/mi-portafolio"
     },
     {
-      "titulo": "Chat WebSocket Bidireccional",
-      "descripcion": "Aplicación de comunicación en tiempo real basada en WebSocket, enfocada en intercambio bidireccional de mensajes entre cliente y servidor. Proyecto útil para demostrar fundamentos de eventos, conexiones persistentes e interacción en tiempo real.",
-      "enlace": "https://github.com/0xStyx507/Chat_WebSocket_Bidireccional"
+      "slug": "chat-websocket-bidireccional",
+      "title": "Chat WebSocket Bidireccional",
+      "summary": "Aplicación cliente-servidor en Java para intercambio de acciones y mensajes de texto en tiempo real mediante WebSocket.",
+      "featured": false,
+      "categories": ["Java", "WebSocket", "Sistemas distribuidos", "Proyectos académicos"],
+      "status": "academic",
+      "origin": "academic",
+      "stack": ["Java 17", "Spring Boot 3.2.5", "WebSocket", "Swing", "Jackson", "Lombok", "Maven"],
+      "architecture": "Dos aplicaciones independientes: cliente y servidor con conexión persistente",
+      "patterns": ["Client-server", "Event-driven communication"],
+      "problem": "Permitir comunicación bidireccional sin depender de solicitudes HTTP repetitivas.",
+      "solution": "Servidor WebSocket que procesa acciones y mensajes, y cliente Swing que mantiene la conexión y muestra respuestas.",
+      "technicalDecisions": ["Separar cliente y servidor", "Usar JSON para el protocolo", "Mantener interfaz Swing para el ejercicio"],
+      "security": ["Ejercicio local sin autenticación ni autorización de producción"],
+      "testing": ["Pruebas manuales de conexión", "Validación de acciones TIME, DATE, HELLO y eco"],
+      "cicd": ["Maven", "GitHub"],
+      "learnings": ["Ciclo de vida de WebSocket", "Comunicación persistente", "Serialización JSON"],
+      "limitations": ["Sin reconexión automática", "Sin identidad de usuarios ni persistencia"],
+      "nextSteps": ["Agregar autenticación", "Manejar reconexiones", "Automatizar pruebas del protocolo"],
+      "repositoryUrl": "https://github.com/0xStyx507/Chat_WebSocket_Bidireccional"
     },
     {
-      "titulo": "Consumo de API Externa",
-      "descripcion": "Proyecto práctico enfocado en consumo de servicios externos, manejo de respuestas HTTP e integración de datos desde APIs. Refuerza fundamentos necesarios para desarrollo backend, integraciones y comunicación entre sistemas.",
-      "enlace": "https://github.com/0xStyx507/consume_API"
+      "slug": "java-sockets-cliente-servidor",
+      "title": "Java Sockets Cliente-Servidor",
+      "summary": "Ejemplo didáctico de comunicación cliente-servidor en Java usando sockets TCP, con módulos separados y una clase de conexión compartida.",
+      "featured": false,
+      "categories": ["Java", "Sistemas distribuidos", "Proyectos académicos"],
+      "status": "academic",
+      "origin": "academic",
+      "stack": ["Java", "TCP sockets", "DataInputStream", "DataOutputStream"],
+      "architecture": "Cliente-servidor con módulos Cliente y Servidor",
+      "patterns": ["Client-server", "Shared connection abstraction"],
+      "problem": "Comprender cómo se establece comunicación entre procesos mediante IP y puerto.",
+      "solution": "Servidor que escucha el puerto 3000 y cliente que envía mensajes y recibe una confirmación.",
+      "technicalDecisions": ["Usar sockets TCP", "Reutilizar la clase Conexion", "Mantener el protocolo textual simple"],
+      "security": ["Ejercicio local sin autenticación, cifrado ni controles de firewall"],
+      "testing": ["Pruebas manuales en localhost y red local"],
+      "cicd": ["Compilación con javac", "GitHub"],
+      "learnings": ["Fundamentos de redes", "Puertos y flujos de datos", "Separación de roles cliente-servidor"],
+      "limitations": ["Sin manejo avanzado de concurrencia o desconexiones", "Protocolo no versionado"],
+      "nextSteps": ["Documentar errores de red", "Agregar concurrencia", "Incorporar pruebas automatizadas"],
+      "repositoryUrl": "https://github.com/0xStyx507/SoketsJava"
     },
     {
-      "titulo": "Foro Alura Backend",
-      "descripcion": "Proyecto backend desarrollado como parte de la formación Oracle ONE / Alura, orientado a la construcción de una solución tipo foro con lógica de dominio, persistencia de datos y estructura de aplicación backend.",
-      "enlace": "https://github.com/0xStyx507/Foro_Alura"
+      "slug": "libreria-alura",
+      "title": "Librería Alura",
+      "summary": "Proyecto académico de Java desarrollado durante la formación de Oracle Next Education / Alura.",
+      "featured": false,
+      "categories": ["Java", "Backend", "Proyectos académicos"],
+      "status": "academic",
+      "origin": "academic",
+      "stack": ["Java"],
+      "architecture": "Aplicación Java orientada a dominio",
+      "patterns": ["Layered architecture"],
+      "problem": "Practicar modelado, lógica de negocio y persistencia dentro de la formación backend.",
+      "solution": "Implementación de un ejercicio de gestión de información bibliográfica en Java.",
+      "technicalDecisions": ["Priorizar separación de responsabilidades", "Mantener el alcance académico"],
+      "security": ["Validación de entradas pendiente de ampliar"],
+      "testing": ["Validación funcional durante la formación"],
+      "cicd": ["GitHub"],
+      "learnings": ["Programación orientada a objetos", "Modelado de dominio en Java"],
+      "limitations": ["README no disponible", "Alcance académico"],
+      "nextSteps": ["Documentar la ejecución", "Agregar pruebas unitarias"],
+      "repositoryUrl": "https://github.com/0xStyx507/Libreria_Alura"
     }
   ],
   "formacion": [
-    {
-      "titulo": "Python más Allá de lo Básico",
-      "institucion": "Python Panamá",
-      "año": "2025"
-    },
-    {
-      "titulo": "Java Backend Jr Dev",
-      "institucion": "Oracle Next Education / Alura",
-      "año": "2024"
-    },
-    {
-      "titulo": "Técnico en Sistemas de Operativos",
-      "institucion": "Clawing",
-      "año": "2024"
-    },
-    {
-      "titulo": "Analista SOC 1",
-      "institucion": "Comunidad DOJO",
-      "año": "2025"
-    },
-    {
-      "titulo": "Bootcamp Check Point R82",
-      "institucion": "Comunidad DOJO + Check Point",
-      "año": "2026"
-    },
-    {
-      "titulo": "Licenciatura en Ingeniería de Ciberseguridad",
-      "institucion": "Universidad del Istmo",
-      "año": "En curso"
-    }
+    { "titulo": "Python más Allá de lo Básico", "institucion": "Python Panamá", "año": "2025" },
+    { "titulo": "Java Backend Jr Dev", "institucion": "Oracle Next Education / Alura", "año": "2024" },
+    { "titulo": "Técnico en Sistemas de Operativos", "institucion": "Clawing", "año": "2024" },
+    { "titulo": "Analista SOC 1", "institucion": "Comunidad DOJO", "año": "2025" },
+    { "titulo": "Bootcamp Check Point R82", "institucion": "Comunidad DOJO + Check Point", "año": "2026" },
+    { "titulo": "Licenciatura en Ingeniería de Ciberseguridad", "institucion": "Universidad del Istmo", "año": "En curso" }
   ],
   "experiencia": [
     {

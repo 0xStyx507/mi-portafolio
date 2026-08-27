@@ -7,6 +7,8 @@ Portafolio personal construido con `Next.js 16`, `React 19`, `TypeScript` y `Tai
 - App Router con render estático en la ruta principal.
 - Fuente de datos basada en `public/data.json`.
 - Arquitectura por feature para el dominio `portfolio`.
+- Catálogo de proyectos con detalle técnico, especialidades, origen, estado y enlaces.
+- Filtros por especialidad y estado, con grupos para destacados, desarrollo y laboratorios.
 - Tema claro/oscuro con `next-themes`.
 - UI con estética editorial/terminal retro y componentes reutilizables.
 - Tooling migrado a `pnpm`.
@@ -87,6 +89,10 @@ Ahí se definen:
 - experiencia
 - año del footer
 
+Cada proyecto incluye `slug`, `title`, `summary`, `featured`, `categories`, `status`, stack,
+arquitectura, decisiones técnicas, seguridad, pruebas, CI/CD, aprendizajes, limitaciones y
+próximos pasos. `PortfolioDataService` valida esta forma antes de renderizarla.
+
 Los logos del carrusel viven en:
 
 - [public/svg-logo.json]
@@ -95,7 +101,7 @@ Los logos del carrusel viven en:
 
 ### Prerrequisitos
 
-- Node.js `25.x` o compatible con el proyecto
+- Node.js `22.x` o compatible con el proyecto
 - `pnpm` disponible globalmente
 
 ### Comandos

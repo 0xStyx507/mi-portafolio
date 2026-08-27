@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Portafolio",
-  description: "Portafolio personal de desarrollo backend",
+  title: "Portafolio de Abdiel Bernal",
+  description: "Portafolio profesional de desarrollo Full Stack, backend, cloud y seguridad aplicada.",
 };
 
 interface RootLayoutProps {
@@ -23,7 +23,7 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="es" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

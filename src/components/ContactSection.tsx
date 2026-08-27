@@ -11,6 +11,7 @@ export default function ContactSection({ emailDestino, id = 'contacto' }: Contac
     const [name, setName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
     const [message, setMessage] = useState<string>('');
+    const [statusMessage, setStatusMessage] = useState<string>('');
 
     const handleSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
         event.preventDefault();
@@ -19,6 +20,7 @@ export default function ContactSection({ emailDestino, id = 'contacto' }: Contac
         const body = encodeURIComponent(`Nombre: ${name}\nCorreo: ${email}\n\nMensaje:\n${message}`);
         const mailtoLink = `mailto:${emailDestino}?subject=${subject}&body=${body}`;
 
+        setStatusMessage('Abriendo tu cliente de correo con el mensaje preparado.');
         window.location.href = mailtoLink;
     };
 
@@ -52,6 +54,9 @@ export default function ContactSection({ emailDestino, id = 'contacto' }: Contac
                         <p className="text-3xl font-semibold text-foreground">Formulario de contacto</p>
                         <p className="text-sm leading-relaxed text-muted-foreground">
                             Completa tus datos y recibiré tu consulta por correo.
+                        </p>
+                        <p className="text-sm text-accent" role="status" aria-live="polite">
+                            {statusMessage}
                         </p>
                     </div>
 

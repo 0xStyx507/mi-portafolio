@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { PortfolioData } from "../model/types";
 import { PortfolioDataService } from "../services/portfolioDataService";
 
@@ -6,6 +6,7 @@ interface UsePortfolioDataResult {
   data: PortfolioData | null;
   loading: boolean;
   error: string | null;
+  retry: () => void;
 }
 
 export function usePortfolioData(): UsePortfolioDataResult {
@@ -13,20 +14,27 @@ export function usePortfolioData(): UsePortfolioDataResult {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    const loadData = async () => {
-      try {
-        const portfolioData = await PortfolioDataService.getInstance().loadData();
-        setData(portfolioData);
-      } catch (err) {
-        setError(err instanceof Error ? err.message : "Unknown error");
-      } finally {
-        setLoading(false);
-      }
-    };
+  const loadData = useCallback(async () => {
+    setLoading(true);
+    setError(null);
 
-    void loadData();
+    try {
+      const portfolioData = await PortfolioDataService.getInstance().loadData();
+      setData(portfolioData);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Unknown error");
+    } finally {
+      setLoading(false);
+    }
   }, []);
 
-  return { data, loading, error };
+  useEffect(() => {
+    const timeoutId = window.setTimeout(() => {
+      void loadData();
+    }, 0);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [loadData]);
+
+  return { data, loading, error, retry: () => void loadData() };
 }

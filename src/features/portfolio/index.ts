@@ -8,4 +8,6 @@ export type {
   PortfolioLink,
   Project,
 } from "./model/types";
+export { PROJECT_ORIGINS, PROJECT_STATUSES } from "./model/types";
+export { validatePortfolioData } from "./model/portfolioDataSchema";
 export { PortfolioDataService } from "./services/portfolioDataService";

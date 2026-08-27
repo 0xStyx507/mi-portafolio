@@ -11,8 +11,8 @@ const DEFAULT_APPEARANCE: AppearanceMode = "normal";
 const APPEARANCE_OPTIONS: Array<{ label: string; value: AppearanceMode }> = [
   { label: "Normal", value: "normal" },
   { label: "Oscuro", value: "oscuro" },
-  { label: "Cyber", value: "amber-terminal" },
-  { label: "Magneto", value: "cyber-magenta" },
+  { label: "Terminal verde", value: "amber-terminal" },
+  { label: "Cyber magenta", value: "cyber-magenta" },
 ];
 
 function applyPalette(palette: AppearanceMode): void {
@@ -69,6 +69,7 @@ export default function PaletteToggle(): ReactElement {
       <select
         ref={selectRef}
         defaultValue={DEFAULT_APPEARANCE}
+        aria-label="Seleccionar apariencia"
         onChange={(event) => handleAppearanceChange(event.target.value as AppearanceMode)}
         className="min-w-28 border-2 border-border bg-card px-3 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-foreground outline-none transition-all duration-300 hover:border-primary focus:border-accent focus:ring-2 focus:ring-accent/30 sm:min-w-36"
         suppressHydrationWarning

@@ -1,3 +1,4 @@
+import { validatePortfolioData } from "../model/portfolioDataSchema";
 import { PortfolioData } from "../model/types";
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
@@ -27,7 +28,7 @@ export class PortfolioDataService {
       throw new Error("Failed to load portfolio data");
     }
 
-    const parsedData = (await response.json()) as PortfolioData;
+    const parsedData = validatePortfolioData(await response.json());
     this.data = parsedData;
     return parsedData;
   }
