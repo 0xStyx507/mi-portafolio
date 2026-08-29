@@ -1,18 +1,20 @@
 "use client";
 
-import { useEffect, useRef, type ReactElement } from "react";
+import { useEffect, useState, type ReactElement } from "react";
+import { Palette } from "lucide-react";
 import { useTheme } from "next-themes";
+import SelectionMenu, { type SelectionMenuOption } from "./SelectionMenu";
 
 type AppearanceMode = "normal" | "oscuro" | "amber-terminal" | "cyber-magenta";
 
 const APPEARANCE_STORAGE_KEY = "portfolio-appearance";
 const DEFAULT_APPEARANCE: AppearanceMode = "normal";
 
-const APPEARANCE_OPTIONS: Array<{ label: string; value: AppearanceMode }> = [
-  { label: "Normal", value: "normal" },
-  { label: "Oscuro", value: "oscuro" },
-  { label: "Terminal verde", value: "amber-terminal" },
-  { label: "Cyber magenta", value: "cyber-magenta" },
+const APPEARANCE_OPTIONS: SelectionMenuOption[] = [
+  { label: "Normal", value: "normal", description: "Base clara", indicatorClass: "bg-[#0f9db0]" },
+  { label: "Oscuro", value: "oscuro", description: "CRT nocturno", indicatorClass: "bg-[#f2a93b]" },
+  { label: "Terminal verde", value: "amber-terminal", description: "Terminal neon", indicatorClass: "bg-[#39ff8f]" },
+  { label: "Cyber magenta", value: "cyber-magenta", description: "Cyber retro", indicatorClass: "bg-[#ff2f92]" },
 ];
 
 function applyPalette(palette: AppearanceMode): void {
@@ -46,40 +48,40 @@ function applyAppearanceSelection(
 
 export default function PaletteToggle(): ReactElement {
   const { setTheme } = useTheme();
-  const selectRef = useRef<HTMLSelectElement>(null);
+  const [appearance, setAppearance] = useState<AppearanceMode>(DEFAULT_APPEARANCE);
 
   useEffect(() => {
     const savedAppearance = localStorage.getItem(APPEARANCE_STORAGE_KEY) as AppearanceMode | null;
-    const appearance = savedAppearance ?? DEFAULT_APPEARANCE;
-    applyAppearanceSelection(setTheme, appearance);
+    const nextAppearance = APPEARANCE_OPTIONS.some((option) => option.value === savedAppearance)
+      ? savedAppearance ?? DEFAULT_APPEARANCE
+      : DEFAULT_APPEARANCE;
 
-    if (selectRef.current) {
-      selectRef.current.value = appearance;
-    }
+    // Restore the persisted choice after hydration without changing the SSR output.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setAppearance(nextAppearance);
+    applyAppearanceSelection(setTheme, nextAppearance);
   }, [setTheme]);
 
-  const handleAppearanceChange = (appearance: AppearanceMode): void => {
-    applyAppearanceSelection(setTheme, appearance);
-    localStorage.setItem(APPEARANCE_STORAGE_KEY, appearance);
+  const handleAppearanceChange = (nextValue: string): void => {
+    if (!APPEARANCE_OPTIONS.some((option) => option.value === nextValue)) return;
+
+    const nextAppearance = nextValue as AppearanceMode;
+    setAppearance(nextAppearance);
+    applyAppearanceSelection(setTheme, nextAppearance);
+    localStorage.setItem(APPEARANCE_STORAGE_KEY, nextAppearance);
   };
 
   return (
-    <label className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.22em] text-muted-foreground">
-      <span className="hidden sm:inline">Apariencia</span>
-      <select
-        ref={selectRef}
-        defaultValue={DEFAULT_APPEARANCE}
-        aria-label="Seleccionar apariencia"
-        onChange={(event) => handleAppearanceChange(event.target.value as AppearanceMode)}
-        className="min-w-28 border-2 border-border bg-card px-3 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-foreground outline-none transition-all duration-300 hover:border-primary focus:border-accent focus:ring-2 focus:ring-accent/30 sm:min-w-36"
-        suppressHydrationWarning
-      >
-        {APPEARANCE_OPTIONS.map((appearance) => (
-          <option key={appearance.value} value={appearance.value}>
-            {appearance.label}
-          </option>
-        ))}
-      </select>
-    </label>
+    <SelectionMenu
+      value={appearance}
+      options={APPEARANCE_OPTIONS}
+      onChange={handleAppearanceChange}
+      ariaLabel="Seleccionar apariencia"
+      label="Apariencia"
+      icon={Palette}
+      labelClassName="hidden md:inline"
+      triggerClassName="h-9 max-w-[10rem] px-2.5 text-[9px] sm:max-w-[11rem] sm:px-3 2xl:max-w-[13rem]"
+      menuClassName="left-auto w-[min(16rem,calc(100vw-2rem))]"
+    />
   );
 }

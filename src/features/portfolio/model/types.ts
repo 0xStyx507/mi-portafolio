@@ -1,7 +1,6 @@
 export const PROJECT_STATUSES = [
   "completed",
   "in-development",
-  "planned",
   "academic",
   "technical-test",
 ] as const;
@@ -24,11 +23,18 @@ export interface SkillGroup {
   herramientas: string[];
 }
 
+export interface TechnicalStrength {
+  titulo: string;
+  enfoque: string;
+  descripcion: string;
+}
+
 export interface Project {
   slug: string;
   title: string;
   summary: string;
   featured: boolean;
+  visible?: boolean;
   categories: string[];
   status: ProjectStatus;
   origin?: ProjectOrigin;
@@ -60,6 +66,10 @@ export interface Education {
 export interface Experience {
   puesto: string;
   empresa: string;
+  marca?: string;
+  logo?: string;
+  ubicacion?: string;
+  contexto?: string;
   año: string;
   descripcion: string;
 }
@@ -67,6 +77,7 @@ export interface Experience {
 export interface PortfolioData {
   nombre: string;
   descripcion: string;
+  fortalezas: TechnicalStrength[];
   enlaces: PortfolioLink[];
   proyectos: Project[];
   skills: SkillGroup[];

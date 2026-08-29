@@ -12,9 +12,9 @@ export default function SkillsSection({
     id = "skills",
 }: SkillsSectionProps): React.ReactElement {
     return (
-        <section id={id} className="px-4 py-16 md:px-8">
+        <section id={id} className="px-4 py-10 md:px-8 md:py-12">
             <div className="mx-auto max-w-7xl">
-                <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+                <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
                     <div className="max-w-3xl">
                         <span className="section-label">Capability Matrix</span>
                         <h2 className="title-display mt-4 text-4xl text-primary md:text-6xl">
@@ -44,12 +44,12 @@ export default function SkillsSection({
                                     {group.titulo}
                                 </h3>
 
-                                <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">
+                            <p className="text-sm font-bold uppercase tracking-[0.16em] text-accent">
                                     {group.enfoque}
                                 </p>
                             </div>
 
-                            <p className="mb-6 text-sm leading-7 text-muted-foreground">
+                            <p className="mb-6 text-base leading-8 text-muted-foreground">
                                 {group.descripcion}
                             </p>
 

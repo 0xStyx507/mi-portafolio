@@ -13,13 +13,13 @@ interface NavLinksProps {
 
 function NavLinks({ className = "", onNavigate }: NavLinksProps): ReactElement {
   return (
-    <div className={`hidden items-center gap-3 lg:flex ${className}`}>
+    <div className={`hidden min-w-0 flex-1 items-center justify-center gap-1 2xl:flex ${className}`}>
       {NAVIGATION_LINKS.map((link) => (
         <a
           key={link.href}
           href={link.href}
           onClick={onNavigate}
-          className="border border-transparent px-3 py-2 text-xs font-bold uppercase tracking-[0.22em] text-muted-foreground transition-colors duration-300 hover:border-border hover:bg-card hover:text-primary"
+          className="border border-transparent px-2 py-2 text-[0.68rem] font-bold uppercase tracking-[0.16em] text-muted-foreground transition-colors duration-300 hover:border-border hover:bg-card hover:text-primary"
         >
           {link.label}
         </a>
@@ -43,7 +43,7 @@ function MobileNav(): ReactElement {
   }, [isOpen]);
 
   return (
-    <div className="relative lg:hidden">
+    <div className="relative 2xl:hidden">
       <button
         type="button"
         aria-expanded={isOpen}
@@ -59,7 +59,7 @@ function MobileNav(): ReactElement {
       {isOpen && (
         <div
           id="mobile-navigation"
-          className="absolute right-0 top-full z-50 mt-3 w-64 border-2 border-border bg-card p-3 shadow-[8px_8px_0_rgba(0,0,0,0.24)]"
+          className="absolute right-0 top-full z-50 mt-3 w-[min(18rem,calc(100vw-2rem))] border-2 border-border bg-card p-3 shadow-[8px_8px_0_rgba(0,0,0,0.24)]"
         >
           <div className="grid gap-1">
             {NAVIGATION_LINKS.map((link) => (
@@ -85,9 +85,9 @@ interface SiteTitleProps {
 
 function SiteTitle({ className = "" }: SiteTitleProps): ReactElement {
   return (
-    <div className={`flex items-center gap-3 ${className}`}>
+    <div className={`flex min-w-0 items-center gap-2 sm:gap-3 ${className}`}>
       <span className="section-label">AB_90</span>
-      <h1 className="title-display text-xl text-primary transition-colors duration-300 hover:text-accent md:text-2xl">
+      <h1 className="title-display min-w-0 truncate text-lg text-primary transition-colors duration-300 hover:text-accent sm:text-xl md:text-2xl">
         Abdiel Bernal
       </h1>
     </div>
@@ -104,10 +104,10 @@ export default function Navbar({ className = "" }: NavbarProps): ReactElement {
       aria-label="Navegación principal"
       className={`fixed top-0 z-50 w-full border-b-2 border-border bg-background/85 backdrop-blur-md ${className}`}
     >
-      <div className="mx-auto grid max-w-7xl grid-cols-[1fr_auto] items-center gap-4 px-4 py-4 md:px-8 lg:grid-cols-[auto_1fr_auto]">
-        <SiteTitle className="min-w-0" />
+      <div className="mx-auto flex min-w-0 max-w-7xl items-center gap-3 px-4 py-3 md:gap-5 md:px-8 2xl:max-w-[92rem]">
+        <SiteTitle className="min-w-0 flex-1 2xl:flex-none" />
         <NavLinks className="justify-center" />
-        <div className="flex items-center gap-2 justify-self-end">
+        <div className="flex shrink-0 items-center gap-2">
           <MobileNav />
           <PaletteToggle />
         </div>

@@ -17,6 +17,14 @@ function isStringArray(value: unknown): value is string[] {
   return Array.isArray(value) && value.every(isString);
 }
 
+const OPTIONAL_PROJECT_STRINGS = [
+  "repositoryUrl",
+  "demoUrl",
+  "documentationUrl",
+  "image",
+  "diagram",
+] as const;
+
 function isLink(value: unknown): boolean {
   return isRecord(value) && isString(value.label) && isString(value.url);
 }
@@ -31,6 +39,15 @@ function isSkillGroup(value: unknown): boolean {
   );
 }
 
+function isTechnicalStrength(value: unknown): boolean {
+  return (
+    isRecord(value) &&
+    isString(value.titulo) &&
+    isString(value.enfoque) &&
+    isString(value.descripcion)
+  );
+}
+
 function isEducation(value: unknown): boolean {
   return isRecord(value) && isString(value.titulo) && isString(value.institucion) && isString(value.año);
 }
@@ -40,6 +57,10 @@ function isExperience(value: unknown): boolean {
     isRecord(value) &&
     isString(value.puesto) &&
     isString(value.empresa) &&
+    (value.marca === undefined || isString(value.marca)) &&
+    (value.logo === undefined || isString(value.logo)) &&
+    (value.ubicacion === undefined || isString(value.ubicacion)) &&
+    (value.contexto === undefined || isString(value.contexto)) &&
     isString(value.año) &&
     isString(value.descripcion)
   );
@@ -52,7 +73,9 @@ function hasRequiredProjectShape(value: unknown): value is Project {
 
   if (!requiredStrings.every((key) => isString(value[key]))) return false;
   if (typeof value.featured !== "boolean") return false;
+  if (value.visible !== undefined && typeof value.visible !== "boolean") return false;
   if (!isStringArray(value.categories) || !isStringArray(value.stack)) return false;
+  if (!OPTIONAL_PROJECT_STRINGS.every((key) => value[key] === undefined || isString(value[key]))) return false;
   if (!PROJECT_STATUSES.includes(value.status as (typeof PROJECT_STATUSES)[number])) return false;
   if (!isStringArray(value.technicalDecisions)) return false;
   if (!isStringArray(value.security)) return false;
@@ -75,6 +98,10 @@ export function validatePortfolioData(value: unknown): PortfolioData {
 
   if (!isString(value.nombre) || !isString(value.descripcion) || !isString(value.añoPie)) {
     throw new Error("Portfolio identity fields are invalid");
+  }
+
+  if (!Array.isArray(value.fortalezas) || !value.fortalezas.every(isTechnicalStrength)) {
+    throw new Error("Portfolio technical strengths are invalid");
   }
 
   if (!Array.isArray(value.enlaces) || !value.enlaces.every(isLink)) {

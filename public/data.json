@@ -1,6 +1,28 @@
 {
   "nombre": "Abdiel Bernal",
-  "descripcion": "Desarrollador Full Stack Jr con orientación fuerte a Backend, APIs REST, ciberseguridad aplicada y cloud. Experiencia práctica en desarrollo, mantenimiento de aplicaciones, validación de APIs, documentación técnica, revisión de seguridad e integración entre servicios.",
+  "descripcion": "Este portfolio reúne proyectos y experiencia práctica en desarrollo web, validación de APIs, documentación técnica y seguridad aplicada.",
+  "fortalezas": [
+    {
+      "titulo": "Backend y APIs",
+      "enfoque": "Servicios, lógica de negocio y validación",
+      "descripcion": "Construcción y mantenimiento de servicios backend, APIs REST, validaciones, manejo de errores y documentación técnica."
+    },
+    {
+      "titulo": "Fullstack y UI",
+      "enfoque": "Interfaces reutilizables y adaptables",
+      "descripcion": "Desarrollo de interfaces web con componentes reutilizables, estructura clara y experiencia visual adaptable."
+    },
+    {
+      "titulo": "AWS y cloud",
+      "enfoque": "Despliegue, entornos y observabilidad",
+      "descripcion": "Familiaridad con servicios cloud, despliegue de aplicaciones, revisión de logs y configuración básica de entornos."
+    },
+    {
+      "titulo": "Seguridad aplicada",
+      "enfoque": "APIs, accesos y revisión de riesgos",
+      "descripcion": "Revisión de APIs, buenas prácticas de seguridad, análisis de hallazgos y documentación técnica de riesgos."
+    }
+  ],
   "enlaces": [
     { "label": "GitHub", "url": "https://github.com/0xStyx507" },
     { "label": "Correo", "url": "mailto:2apty507@gmail.com" },
@@ -51,7 +73,7 @@
       "title": "Secure Service Desk API",
       "summary": "API de service desk con NestJS, MongoDB, GridFS, Redis y BullMQ, acompañada de frontend demo y controles de seguridad aplicados.",
       "featured": true,
-      "categories": ["Full Stack", "Backend", "Node.js", "Ciberseguridad", "DevSecOps", "Cloud"],
+      "categories": ["Full Stack", "Backend", "Ciberseguridad", "DevSecOps", "Cloud"],
       "status": "in-development",
       "origin": "personal",
       "stack": ["TypeScript", "NestJS", "MongoDB", "Mongoose", "GridFS", "Redis", "BullMQ", "React", "Vite", "Docker"],
@@ -73,7 +95,7 @@
       "title": "Developer Community Platform",
       "summary": "Plataforma full-stack para publicaciones, respuestas, etiquetas y colaboración técnica, con backend seguro y frontend inicial.",
       "featured": true,
-      "categories": ["Full Stack", "Backend", "Java", "DevSecOps"],
+      "categories": ["Full Stack", "Backend", "DevSecOps"],
       "status": "in-development",
       "origin": "personal",
       "stack": ["Java 21", "Spring Boot 3.3.5", "Spring Security", "JPA", "PostgreSQL 16", "Flyway", "Next.js 14", "React 18", "TypeScript", "Docker"],
@@ -91,12 +113,34 @@
       "repositoryUrl": "https://github.com/0xStyx507/Developer-Community-Platform"
     },
     {
+      "slug": "hyperbank",
+      "title": "Hyperbank",
+      "summary": "Concepto de plataforma bancaria para una prueba técnica, centrado en movimientos monetarios, ledger confiable y controles de seguridad.",
+      "featured": false,
+      "visible": false,
+      "categories": ["Full Stack", "Backend", "Fintech", "Ciberseguridad"],
+      "status": "technical-test",
+      "origin": "technical-test",
+      "stack": ["Go", "React", "TypeScript", "PostgreSQL", "TigerBeetle", "Docker", "MCP"],
+      "architecture": "API Go + cliente web React + ledger transaccional + PostgreSQL para datos auxiliares",
+      "patterns": ["Hexagonal architecture", "Ledger-based accounting", "Idempotent commands"],
+      "problem": "Diseñar una base bancaria verificable donde los balances sean consistentes, las operaciones puedan repetirse de forma segura y cada movimiento quede trazable.",
+      "solution": "Propuesta de una API orientada a comandos, un ledger especializado para dinero y una interfaz web para consultar cuentas y operaciones con confirmaciones explícitas.",
+      "technicalDecisions": ["No usar float para dinero", "Separar el ledger de la persistencia auxiliar", "Diseñar operaciones idempotentes", "Mantener MCP detrás de confirmación explícita"],
+      "security": ["Validación de ownership y autorización por operación", "No guardar secretos en el repositorio", "Auditoría de movimientos y acciones sensibles", "Defensa contra replay e inyección de prompts"],
+      "testing": ["Casos de saldo y transferencia", "Pruebas de idempotencia y replay", "Integración API/ledger", "Smoke test con Docker Compose"],
+      "cicd": ["Docker Compose", "GitHub Actions", "Escaneo de dependencias y contenedores"],
+      "learnings": ["Modelado de dominios financieros", "Consistencia e idempotencia", "Diseño de herramientas con confirmación humana"],
+      "limitations": ["Concepto en revisión", "No publicado en el catálogo", "Integraciones y alcance funcional pendientes"],
+      "nextSteps": ["Definir flujos y límites del MVP", "Completar la arquitectura", "Construir y validar los casos de dinero", "Preparar documentación técnica" ]
+    },
+    {
       "slug": "mi-portafolio",
       "title": "Portafolio Personal",
       "summary": "Catálogo técnico construido con Next.js, React, TypeScript y Tailwind CSS, con contenido editable desde JSON y filtros por especialidad y estado.",
       "featured": true,
-      "categories": ["Full Stack", "Frontend", "TypeScript"],
-      "status": "in-development",
+      "categories": ["Full Stack", "Frontend"],
+      "status": "completed",
       "origin": "personal",
       "stack": ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS 4", "next-themes", "pnpm"],
       "architecture": "App Router con arquitectura modular orientada a features",
@@ -117,7 +161,7 @@
       "title": "Chat WebSocket Bidireccional",
       "summary": "Aplicación cliente-servidor en Java para intercambio de acciones y mensajes de texto en tiempo real mediante WebSocket.",
       "featured": false,
-      "categories": ["Java", "WebSocket", "Sistemas distribuidos", "Proyectos académicos"],
+      "categories": ["Sistemas distribuidos", "Proyectos académicos"],
       "status": "academic",
       "origin": "academic",
       "stack": ["Java 17", "Spring Boot 3.2.5", "WebSocket", "Swing", "Jackson", "Lombok", "Maven"],
@@ -139,7 +183,7 @@
       "title": "Java Sockets Cliente-Servidor",
       "summary": "Ejemplo didáctico de comunicación cliente-servidor en Java usando sockets TCP, con módulos separados y una clase de conexión compartida.",
       "featured": false,
-      "categories": ["Java", "Sistemas distribuidos", "Proyectos académicos"],
+      "categories": ["Sistemas distribuidos", "Proyectos académicos"],
       "status": "academic",
       "origin": "academic",
       "stack": ["Java", "TCP sockets", "DataInputStream", "DataOutputStream"],
@@ -161,7 +205,7 @@
       "title": "Librería Alura",
       "summary": "Proyecto académico de Java desarrollado durante la formación de Oracle Next Education / Alura.",
       "featured": false,
-      "categories": ["Java", "Backend", "Proyectos académicos"],
+      "categories": ["Backend", "Proyectos académicos"],
       "status": "academic",
       "origin": "academic",
       "stack": ["Java"],
@@ -191,6 +235,10 @@
     {
       "puesto": "Tester de Software / Funciones orientadas a Desarrollo, Soporte Técnico y Seguridad Aplicada",
       "empresa": "MultimoneyCo S.A.",
+      "marca": "Money Free Flex",
+      "logo": "/assets/money-free-flex-logo.png",
+      "ubicacion": "Panamá",
+      "contexto": "Marca comercial de MultimoneyCo S.A. enfocada en una app multimoneda para gestionar e intercambiar divisas y activos digitales.",
       "año": "nov. 2024 - actualidad",
       "descripcion": "Participación en desarrollo, mantenimiento de aplicaciones, validación de APIs, documentación técnica, revisión de seguridad, soporte a cambios e integración entre servicios."
     }

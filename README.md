@@ -38,7 +38,6 @@ src/
 │   ├── EducationSection.tsx
 │   ├── ExperienceSection.tsx
 │   ├── FooterSection.tsx
-│   ├── LogoInline.tsx
 │   ├── ProjectsSection.tsx
 │   ├── SkillsSection.tsx
 │   └── ThemeProviderWrapper.tsx
@@ -55,12 +54,9 @@ src/
 │       ├── services/
 │       │   └── portfolioDataService.ts
 │       └── index.ts
-└── lib/
-    └── utils.ts
-
 public/
 ├── data.json
-└── svg-logo.json
+└── assets/
 ```
 
 ## Cómo funciona
@@ -92,10 +88,6 @@ Ahí se definen:
 Cada proyecto incluye `slug`, `title`, `summary`, `featured`, `categories`, `status`, stack,
 arquitectura, decisiones técnicas, seguridad, pruebas, CI/CD, aprendizajes, limitaciones y
 próximos pasos. `PortfolioDataService` valida esta forma antes de renderizarla.
-
-Los logos del carrusel viven en:
-
-- [public/svg-logo.json]
 
 ## Desarrollo
 
@@ -133,6 +125,7 @@ Validaciones usadas actualmente:
 
 ```bash
 pnpm lint
+pnpm typecheck
 pnpm build
 ```
 

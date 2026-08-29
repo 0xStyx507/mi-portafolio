@@ -1,13 +1,14 @@
 /** @type {import('next').NextConfig} */
-const isGithubPages = process.env.GITHUB_ACTIONS === "true";
+const configuredBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const basePath = configuredBasePath || (process.env.GITHUB_ACTIONS === "true" ? "/mi-portafolio" : "");
 
 const nextConfig = {
   output: "export",
   images: {
     unoptimized: true,
   },
-  basePath: isGithubPages ? "/mi-portafolio" : "",
-  assetPrefix: isGithubPages ? "/mi-portafolio/" : "",
+  basePath,
+  assetPrefix: basePath ? `${basePath}/` : "",
   trailingSlash: true,
 };
 

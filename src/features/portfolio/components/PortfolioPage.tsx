@@ -46,7 +46,7 @@ export default function PortfolioPage(): React.ReactElement {
     <div className="min-h-screen bg-background pt-20 text-foreground">
       <Navbar />
 
-      <AboutSection descripcion={data.descripcion} enlaces={data.enlaces} />
+      <AboutSection descripcion={data.descripcion} fortalezas={data.fortalezas} enlaces={data.enlaces} />
       <SkillsSection skills={data.skills} />
       <ProjectsSection proyectos={data.proyectos} />
       <EducationSection formacion={data.formacion} />

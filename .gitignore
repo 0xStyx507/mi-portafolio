@@ -36,9 +36,16 @@ yarn-error.log*
 # vercel
 .vercel
 
+# local tooling and generated analysis
+/.runtime/
+/graphify-out/
+/.vscode/
+openspec
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
 
 .agents
 AGENTS.md
+.codex/
